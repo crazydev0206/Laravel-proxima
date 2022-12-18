@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+<meta charset='utf-8'>
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<title>
+Help || RideSharing
+</title>
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+<link href="stylesheets/site.css" rel="stylesheet" />
+<link href='css/all.min.css' rel='stylesheet' type='text/css'>
+<link href='css/fonts.css' rel='stylesheet' type='text/css'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Rubik:300,400,500,600%7CIBM+Plex+Sans:300,400,500,600,700' rel='stylesheet'>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.12/dist/css/bootstrap-select.min.css" rel="stylesheet" />
+<link href="https://unpkg.com/bootstrap-select-country@4.1.0/dist/css/bootstrap-select-country.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css" rel="stylesheet" type="text/css" />
+
+<!-- <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
+<script src="javascripts/libs/jquery.3.3.1.min.js"></script>
+<script src="javascripts/libs/popper.min.js"></script>
+<script src="javascripts/libs/bootstrap.4.4.1.min.js"></script>
+<!-- calaner -->
+<link href='https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css' rel='stylesheet' type='text/css'>
+<!-- calander -->
+    
+    <style>
+        @font-face {
+  font-family: "futura";
+  src: url(fonts/Futura.ttf);
+}
+        
+        h3, h5, .home__more__reason .travel h6, .home__easy__use h6, .card-spl h6, .join-move, .home__header__main .navbar-nav.header-left-side .nav-item .nav-link{
+            font-family:  'futura', sans-serif;
+        }
+        
+        h5{
+            font-size: 23px;
+        }
+        
+        .home__header__main .navbar-nav.header-left-side .nav-item .nav-link{
+            font-size: 17px;
+        }
+        
+        .nav-link-highlight .highlight {
+            font-size: 8px;
+            top: 0px;
+        }
+        
+        .home__search__banner .inputWithIcon .form-field-img {
+    top: 12px;
+    width: 28px;
+        }
+        
+        .home__search__banner .input-group.gj-datepicker-bootstrap .input-group-append button .gj-icon {
+    top: 13px;
+}
+        
+        .form-date-picker-wrapper .close-date-btn {
+            top: 12px;
+        }
+        
+        .landing-search-icon.btn.wrn-btn{
+            padding-top: 10px;
+        }
+        
+        .home__header__main .navbar-nav.header-left-side .nav-item{
+            margin-right: 15px;
+        }
+        
+        @media only screen and (min-width:1400px) {
+            .home__banner__box .carousel-item {
+            height: 550px;
+            min-height: 550px;
+        }
+            
+            .landing-search-icon.btn.wrn-btn{
+            padding-top: 10px;
+                padding-bottom: 10px;
+        }
+        }
+        
+        @media only screen and (max-width:1300px){
+            .home__banner__box .carousel-item {
+            height: 440px;
+            min-height: 440px;
+        }
+        }
+        
+        @media only screen and (min-width:1200px) {
+            
+                div.card__ride div.list-group .media-body p.font-weight-bold{
+                    padding-top:.5rem;
+                }
+            
+            .landing-search-icon.btn.wrn-btn{
+            padding-top: 9.7px;
+                padding-bottom: 9.64px;
+        }
+        }
+        
+        @media only screen and (min-width:768px) {
+        .wrn-btn.wrn-btn-r-radius {
+    border-top-right-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+        }
+        }
+        
+        @media (max-width: 1000px) {
+            
+            .landing-search-icon.btn.wrn-btn{
+            padding-top: 9.8px;
+                padding-bottom: 9.8px;
+        }
+        }
+        
+        @media (max-width: 990px) and (min-width: 762px) {
+            .home__banner__box .carousel-item {
+            height: 350px;
+            min-height: 350px;
+        }
+            
+            .landing-search-icon.btn.wrn-btn{
+            padding-top: 9.6px;
+                padding-bottom: 9.6px;
+        }
+        }
+        
+        @media (max-width: 991px) {
+.nav-link-highlight .highlight {
+    top: 13px;
+    right: auto;
+    left: 64px;
+        }
+        
+        @media all and (max-width: 768px) {
+      .home__search__banner .search__section__submit {
+        flex-basis: 100%;
+        max-width: 100%; } }
+  .home__search__banner .search__section__toggle {
+    flex-basis: 40px;
+    max-width: 40px; }
+    .home__search__banner .search__section__toggle .btn-toggle {
+      background: #f0f0f0;
+      border-radius: 0;
+      font-size: 0.77em;
+      width: 100%;
+      border-top: 1px solid #aaa;
+      border-bottom: 1px solid #aaa; }
+    @media all and (max-width: 768px) {
+      .home__search__banner .search__section__toggle {
+        flex-basis: 100%;
+        max-width: 100%; }
+        .home__search__banner .search__section__toggle .btn-toggle {
+          border-bottom: none !important;
+          border-left-color: #aaa;
+          border-right-color: #aaa; } }
+  .home__search__banner .search__section__to, .home__search__banner .search__section__from, .home__search__banner .search__section__date {
+    flex-basis: calc((100% - 90px)/3);
+    max-width: calc((100% - 90px)/3); }
+    @media all and (max-width: 768px) {
+      .home__search__banner .search__section__to, .home__search__banner .search__section__from, .home__search__banner .search__section__date {
+        flex-basis: 100%;
+        max-width: 100%; } }
+            
+            @media all and (max-width: 459px) {
+      .even__more__list li {
+        flex-basis: 50%;
+        max-width: 50%; } }
+            
+            span.text{
+                font-weight: 500;
+            }
+    </style>
+    
+    <style>
+        ul.luggage__list input[type="radio"]:checked + .selector-role {
+    border-color: #00d262;
+            color: #00d262;
+}
+        
+        .border {
+    border: 1px solid #ced4da !important;
+}
+        
+        @media (min-width: 768px) {
+            .location__row .location__direction {
+                position: absolute;
+                top: calc(50% - 10px);
+                right: calc(50% - 0px);
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .ride__driver .image__image picture, .ride__driver .image__image img{
+                max-width: 36px !important;
+            }
+            
+            .ride__others .car__image img {
+                max-width: 36px;
+                display: inline-block;
+            }
+            
+            .ride__others .car__restricted ul li .img-block img {
+                width: 16px !important;
+            }
+            
+            .ride__others .car__restricted ul {
+                width: calc(100% + 4px);
+                display: flex;
+            }
+            
+            p {
+                font-size: 13px !important;
+            }
+            
+            .profile__content h6{
+                font-size: 0.7rem !important;
+            }
+            
+            .profile__content p{
+                font-size: 0.7rem !important;
+                line-height: 0.8rem !important;
+            }
+            
+            .search__result .search__result__driver {
+    flex-basis: 45%;
+    max-width: 45%;
+    padding-left: 15px;
+}
+            
+            .search__result__row .grid {
+    padding: 15px 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+            
+            .search__result .search__result__other {
+    flex-basis: 55%;
+    max-width: 55%;
+}
+            
+            .search__result .search__result__places {
+    flex-basis: calc(100% - 100px);
+    max-width: calc(100% - 100px);
+}
+            
+            .search__result .search__result__info {
+    flex-basis: 100px;
+    max-width: 100px;
+    padding-right: 15px;
+}
+            
+        }
+            
+            label{
+                margin-bottom: 6px;
+            }
+            
+        
+        @media (min-width: 767px) {
+            .inputWithIcon input[type="text"], .home__search__banner .form-control, .home__search__banner .input-group.gj-datepicker-bootstrap .input-group-append button{
+                border-color: white;
+            }
+            
+            .home__search__banner .search__section__toggle .btn-toggle {
+                border-color: #f0f0f0;
+            }
+        }
+            
+            .price__time .ride__price {
+                font-size: 19px;
+            }
+    </style>
+    
+    <style>
+        .vehicle__detail__list li .li-wrapper{
+            margin-bottom: 10px;
+        }
+        
+        .vehicle__detail__list li .li-wrapper span.ans{
+            font-weight: 500;
+        }
+        
+        .mbl-show{
+                display: none;
+            }
+        
+        @media (max-width: 767px) {
+            .btn.btn-outline.btn-outline-b-light {
+                font-size: 13px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            
+            .justify-content-between {
+                -ms-flex-pack: justify !important;
+                justify-content: normal !important;
+            }
+            
+            .mbl-show{
+                display: block;
+            }
+            
+            .dsk-hide{
+                display: none;
+            }
+        }
+        
+        .help__box {
+                box-shadow: 0 0px 6px 0px #eee;
+            }
+        
+        @media (max-width: 767px) and (min-width: 500px) {
+            .help__service__list li {
+                flex-basis: 50%;
+                max-width: 50%;
+            }
+        }
+        
+ .form-control:focus {
+  border-color: #ced4da;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+        
+        .form-country-selector {
+    max-width: 180px !important;
+    padding-right:6px;
+        }
+    </style>
+</head>
+<body>
+<div class='body__wrapper'>
+<div class='header__content'>
+<!-- =====================Navbar=========================== -->
+<div class='home__header__main'>
+<div class='container-fluid'>
+<nav class='navbar navbar-expand-lg navbar-light bg-light navbar-custom-header'>
+<a class='navbar-brand' href='#'>
+<img src="images/logo/main-logo.png" alt="Main logo" />
+</a>
+<button aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation' class='navbar-toggler' data-target='#navbarSupportedContent' data-toggle='collapse' type='button'>
+<span class='navbar-toggler-icon'></span>
+</button>
+<div class='collapse navbar-collapse' id='navbarSupportedContent'>
+<ul class='navbar-nav mr-auto header-left-side'>
+<li class='nav-item'>
+<a class='nav-link nav-link-highlight' href='#'>
+<span class='highlight' style="border-radius: 2px;">New</span>
+<span class='text'>Students</span>
+</a>
+</li>
+<li class='nav-item'>
+<a class='nav-link' href='#'><img alt='' class='mr-2' height='16' src='images/plus.png' width='16'><span class='text'>Post a ride</span>
+</a>
+</li>
+<li class='nav-item'>
+<a class='nav-link' href='#'><i aria-hidden='true' class='fa fa-search pr-2' style="font-weight: normal; font-size:15px;"></i><span class='text'>Find a ride</span>
+</a>
+</li>
+</ul>
+<form class='form-inline my-2 my-lg- nav-right-section'>
+<a class='nav-link login_text nav-login-btn' href='#'><i aria-hidden='true' class='fa fa-user-o pr-2'></i>Log in / Sign up
+</a>
+<style>
+        .language-hp a{
+            color: #2d4653 !important;
+            text-decoration: none;
+        }
+        
+        .language-hp ul li {
+    cursor: pointer;
+            list-style-type: none;
+            color: #2d4653;
+}
+        
+        .language-hp .dropdown-menu{
+            left: -39px !important;
+            top: 30px !important;
+            min-width: 0rem !important;
+        }
+    </style>
+<div class="language-hp">
+    <ul class="nav-link login_text nav-login-btn form-control form-country-selector" style="padding-top: 0.3em; height: 37.5px; margin-bottom: 0rem;">
+                <li class='nav-item dropdown'>
+<a class='nav-link flag-nav-link p-0 pt-1' data-toggle='dropdown' href='javascript:void(0)'>
+    <img src="images/british_flag.svg" style="width: 19px; height: 20px; margin-bottom: 1px;"/> English</a>
+<ul class='dropdown-menu'>
+<li class='dropdown-item'>
+<a href='#'>
+    <img src="images/british_flag.svg" style="width: 19px; height: 20px; margin-bottom: 1px;"/>
+English
+</a>
+</li>
+<li class='dropdown-item'>
+<a href='#'>
+<img src="images/french.jpg" style="width: 19px; height: 13px; margin-bottom: 2px;"/>
+French
+</a>
+</li>
+<li class='dropdown-item'>
+<a href='#'>
+<img src="images/spanish.jpg" style="width: 19px; height: 13px; margin-bottom: 2px;"/>
+Spanish
+</a>
+</li>
+</ul>
+</li>
+                </ul>
+        </div>
+</form>
+</div>
+</nav>
+</div>
+</div>
+<!-- =====================Navbar_end======================= -->
+
+</div>
+<div class='body__content'>
+<div class='ride__share__page page__common p-60 with-b-top'>
+<div class='container'>
+<!-- / Help search section -->
+<div class='row'>
+<div class='col-12'>
+<div class='row'>
+<div class='col-12 col-md-10 col-lg-9 col-xl-8 mr-auto ml-auto'>
+<h3 class='text-center f-700 mb-4'>Hello, how can we help?</h3>
+<div class='ask__outer mb-5'>
+<div class='ask__question'>
+<div class='form-group mb-2'>
+<div class='input-group input-group-lg'>
+<div class='input-group-prepend'>
+<span class='input-group-text'>
+<span class='fa fa-search'></span>
+</span>
+</div>
+<input class='form-control form-control-lg' placeholder='Ask a question...'>
+<div class='input-group-append'>
+<button class='btn btn-primary input-group-addon'>
+Search
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class='ask__suggestion'>
+<div class='row'>
+<div class='col-12 col-md-10 col-lg-9 col-xl-8 mr-auto ml-auto text-center'>
+<p class='mb-0 text-grey-1'>or choose a category to quick find the help you need</p>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<!-- / Difference service -->
+<div class='row'>
+<div class='col-12'>
+<div class='difference__wrapper mb-5'>
+<div class='help__service__wrapper'>
+<div class='help__service'>
+<ul class='ul__list help__service__list ul__list--horizontal'>
+<li>
+<div class='help__box'>
+<div class='help__icon'>
+<div class='h__icon'>
+    
+<img src="images/89-1-getting-started.png" class='section-icon-img'>
+
+</div>
+</div>
+<div class='help__text'>
+<h6 class='h-title'>Getting started</h6>
+</div>
+</div>
+</li>
+<li>
+<div class='help__box'>
+<div class='help__icon'>
+<div class='h__icon'>
+    
+<img src="images/89-2-pricing-and-plans.png" class='section-icon-img'>
+
+</div>
+</div>
+<div class='help__text'>
+<h6 class='h-title'>Pricing & plans</h6>
+</div>
+</div>
+</li>
+<li>
+<div class='help__box'>
+<div class='help__icon'>
+<div class='h__icon'>
+
+<img src="images/88-contact-us.png" class='section-icon-img'>
+
+</div>
+</div>
+<div class='help__text'>
+<h6 class='h-title'>Sales questions</h6>
+</div>
+</div>
+</li>
+<li>
+<div class='help__box'>
+<div class='help__icon'>
+<div class='h__icon'>
+
+<img src="images/89-4-user-guides.png" class='section-icon-img'>
+    
+</div>
+</div>
+<div class='help__text'>
+<h6 class='h-title'>Use quides</h6>
+</div>
+</div>
+</li>
+<li>
+<div class='help__box'>
+<div class='help__icon'>
+<div class='h__icon'>
+    
+<img src="images/89-5-support-services.png" class='section-icon-img'>
+    
+</div>
+</div>
+<div class='help__text'>
+<h6 class='h-title'>Support services</h6>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<!-- / Pricing plan section -->
+<div class='row'>
+<div class='col-12'>
+<div class='row'>
+<div class='col-12 col-md-10 col-lg-9 col-xl-8 mr-auto ml-auto'>
+<h4 class='sub-title text-center mb-4'>Pricing plans</h4>
+<p class='text-center text-grey-1 mb-5'>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in dui ante.<br> Quisque venenatis nisl nec arcu mollis, ut ultricies sapien rutrum.
+</p>
+<div class='accordion price__accordion' id='pricing-plan-accordion'>
+<div class='card price__card'>
+<div class='card-header price__header' id='pricing-header-0'>
+<h2 class='price__title mb-0'>
+<button aria-controls='pricing-plan-0' aria-expanded='true' class='btn btn-link' data-target='#pricing-plan-0' data-toggle='collapse' type='button'>
+Lorum ipsum is simply dummy text of industry?
+</button>
+<button aria-controls='pricing-plan-0' aria-expanded='true' class='btn btn-toggle collapsed' data-target='#pricing-plan-0' data-toggle='collapse' type='button'>
+<span class='fa fa-plus c-open'></span>
+<span class='fa fa-minus c-close'></span>
+</button>
+</h2>
+</div>
+<div aria-labelledby='pricing-header-0' class='collapse price__collapse' data-parent='#pricing-plan-accordion' id='pricing-plan-0'>
+<div class='card-body price__body'>
+Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+</div>
+</div>
+</div>
+<div class='card price__card'>
+<div class='card-header price__header' id='pricing-header-1'>
+<h2 class='price__title mb-0'>
+<button aria-controls='pricing-plan-1' aria-expanded='true' class='btn btn-link' data-target='#pricing-plan-1' data-toggle='collapse' type='button'>
+Lorum ipsum is simply dummy text of industry?
+</button>
+<button aria-controls='pricing-plan-1' aria-expanded='true' class='btn btn-toggle collapsed' data-target='#pricing-plan-1' data-toggle='collapse' type='button'>
+<span class='fa fa-plus c-open'></span>
+<span class='fa fa-minus c-close'></span>
+</button>
+</h2>
+</div>
+<div aria-labelledby='pricing-header-1' class='collapse price__collapse' data-parent='#pricing-plan-accordion' id='pricing-plan-1'>
+<div class='card-body price__body'>
+Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+</div>
+</div>
+</div>
+<div class='card price__card'>
+<div class='card-header price__header' id='pricing-header-2'>
+<h2 class='price__title mb-0'>
+<button aria-controls='pricing-plan-2' aria-expanded='true' class='btn btn-link' data-target='#pricing-plan-2' data-toggle='collapse' type='button'>
+Lorum ipsum is simply dummy text of industry?
+</button>
+<button aria-controls='pricing-plan-2' aria-expanded='true' class='btn btn-toggle collapsed' data-target='#pricing-plan-2' data-toggle='collapse' type='button'>
+<span class='fa fa-plus c-open'></span>
+<span class='fa fa-minus c-close'></span>
+</button>
+</h2>
+</div>
+<div aria-labelledby='pricing-header-2' class='collapse price__collapse' data-parent='#pricing-plan-accordion' id='pricing-plan-2'>
+<div class='card-body price__body'>
+Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+</div>
+</div>
+</div>
+<div class='card price__card'>
+<div class='card-header price__header' id='pricing-header-3'>
+<h2 class='price__title mb-0'>
+<button aria-controls='pricing-plan-3' aria-expanded='true' class='btn btn-link' data-target='#pricing-plan-3' data-toggle='collapse' type='button'>
+Lorum ipsum is simply dummy text of industry?
+</button>
+<button aria-controls='pricing-plan-3' aria-expanded='true' class='btn btn-toggle collapsed' data-target='#pricing-plan-3' data-toggle='collapse' type='button'>
+<span class='fa fa-plus c-open'></span>
+<span class='fa fa-minus c-close'></span>
+</button>
+</h2>
+</div>
+<div aria-labelledby='pricing-header-3' class='collapse price__collapse' data-parent='#pricing-plan-accordion' id='pricing-plan-3'>
+<div class='card-body price__body'>
+Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+</div>
+</div>
+</div>
+<div class='card price__card'>
+<div class='card-header price__header' id='pricing-header-4'>
+<h2 class='price__title mb-0'>
+<button aria-controls='pricing-plan-4' aria-expanded='true' class='btn btn-link' data-target='#pricing-plan-4' data-toggle='collapse' type='button'>
+Lorum ipsum is simply dummy text of industry?
+</button>
+<button aria-controls='pricing-plan-4' aria-expanded='true' class='btn btn-toggle collapsed' data-target='#pricing-plan-4' data-toggle='collapse' type='button'>
+<span class='fa fa-plus c-open'></span>
+<span class='fa fa-minus c-close'></span>
+</button>
+</h2>
+</div>
+<div aria-labelledby='pricing-header-4' class='collapse price__collapse' data-parent='#pricing-plan-accordion' id='pricing-plan-4'>
+<div class='card-body price__body'>
+Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+</div>
+</div>
+</div>
+<div class='card price__card'>
+<div class='card-header price__header' id='pricing-header-5'>
+<h2 class='price__title mb-0'>
+<button aria-controls='pricing-plan-5' aria-expanded='true' class='btn btn-link' data-target='#pricing-plan-5' data-toggle='collapse' type='button'>
+Lorum ipsum is simply dummy text of industry?
+</button>
+<button aria-controls='pricing-plan-5' aria-expanded='true' class='btn btn-toggle collapsed' data-target='#pricing-plan-5' data-toggle='collapse' type='button'>
+<span class='fa fa-plus c-open'></span>
+<span class='fa fa-minus c-close'></span>
+</button>
+</h2>
+</div>
+<div aria-labelledby='pricing-header-5' class='collapse price__collapse' data-parent='#pricing-plan-accordion' id='pricing-plan-5'>
+<div class='card-body price__body'>
+Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+</div>
+</div>
+</div>
+<div class='card price__card'>
+<div class='card-header price__header' id='pricing-header-6'>
+<h2 class='price__title mb-0'>
+<button aria-controls='pricing-plan-6' aria-expanded='true' class='btn btn-link' data-target='#pricing-plan-6' data-toggle='collapse' type='button'>
+Lorum ipsum is simply dummy text of industry?
+</button>
+<button aria-controls='pricing-plan-6' aria-expanded='true' class='btn btn-toggle collapsed' data-target='#pricing-plan-6' data-toggle='collapse' type='button'>
+<span class='fa fa-plus c-open'></span>
+<span class='fa fa-minus c-close'></span>
+</button>
+</h2>
+</div>
+<div aria-labelledby='pricing-header-6' class='collapse price__collapse' data-parent='#pricing-plan-accordion' id='pricing-plan-6'>
+<div class='card-body price__body'>
+Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='footer__content'>
+<!-- Footer -->
+<footer class='page-footer font-small mdb-color pt-4'>
+<!-- Footer Links -->
+<div class='container text-center text-md-left'>
+<!-- Footer links -->
+<div class='row text-center text-md-left mt-3 pb-3'>
+<!-- Grid column -->
+<div class='col-md-3 col-lg-3 col-xl-3 mx-auto mt-3'>
+<h6 class='text-uppercase mb-4 font-weight-bold'>
+<img src="images/logo/footer-logo.png" alt="Footer logo" />
+</h6>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+<!-- / Store information -->
+<ul class='footer__store ul__list d-none'>
+<li>
+<a href='#'>
+<img src="images/store/google-play.png" alt="Google play" />
+</a>
+</li>
+<li>
+<a href='#'>
+<img src="images/store/app-store.png" alt="App store" />
+</a>
+</li>
+</ul>
+<!-- / End store information -->
+</div>
+<!-- Grid column -->
+<hr class='w-100 clearfix d-md-none'>
+<!-- Grid column -->
+<div class='col-md-2 col-lg-2 col-xl-2 mx-auto mt-3'>
+    <p><a class='footer-text' href='#!'>Sign up</a></p>
+<p>
+<a class='footer-text' href='#!'>Log in</a>
+</p>
+<p>
+<a class='footer-text' href='#!'>Post a ride</a>
+</p>
+<p>
+<a class='footer-text' href='#!'>Find a ride</a>
+</p>
+</div>
+<!-- Grid column -->
+<hr class='w-100 clearfix d-md-none'>
+<!-- Grid column -->
+<div class='col-md-3 col-lg-2 col-xl-2 mx-auto mt-3'>
+    <p><a class='footer-text' href='#!'>How it works</a></p>
+<p>
+<a class='footer-text' href='#!'>For drivers</a>
+</p>
+<p>
+<a class='footer-text' href='#!'>For passengers</a>
+</p>
+<p>
+<a class='footer-text' href='#!'>Help</a>
+</p>
+</div>
+<!-- Grid column -->
+<hr class='w-100 clearfix d-md-none'>
+<!-- Grid column -->
+<div class='col-md-2 col-lg-2 col-xl-2 mx-auto mt-3'>
+    <p><a class='footer-text' href='#!'>Students</a></p>
+<p>
+<a class='footer-text' href='#!'>Contact us / Support</a>
+</p>
+<p>
+<a class='footer-text' href='#!'>FAQ</a>
+</p>
+<p>
+<a class='footer-text' href='#!'>Partners</a>
+</p>
+</div>
+<!-- Grid column -->
+<!-- Grid column -->
+<div class='col-md-2 col-lg-2 col-xl-2 mx-auto mt-3'>
+    <p><a class='footer-text' href='#!'>Terms of services</a></p>
+<p>
+<a class='footer-text' href='#!'>Privacy policy</a>
+</p>
+<p>
+<a class='footer-text' href='#!'>Media</a>
+</p>
+</div>
+<!-- Grid column -->
+</div>
+<!-- Footer links -->
+<hr>
+<!-- Grid row -->
+<div class='row d-flex align-items-center'>
+<!-- Grid column -->
+<div class='col-md-7 col-lg-8'>
+<!-- Copyright -->
+<p class='text-center text-md-left'>© 2020 Ridesforshare. All rights reserved.</p>
+</div>
+<!-- Grid column -->
+<!-- Grid column -->
+<div class='col-md-5 col-lg-4 ml-lg-0'>
+<!-- Social buttons -->
+<div class='text-center text-md-right'>
+<ul class='list-unstyled list-inline footer-social-media'>
+<li class='list-inline-item'>
+<a class='btn-floating btn-sm rgba-white-slight mx-1'>
+<i aria-hidden='true' class='fa fa-facebook'></i>
+</a>
+</li>
+<li class='list-inline-item'>
+<a class='btn-floating btn-sm rgba-white-slight mx-1'>
+<i aria-hidden='true' class='fa fa-instagram'></i>
+</a>
+</li>
+<li class='list-inline-item'>
+<a class='btn-floating btn-sm rgba-white-slight mx-1'>
+<i aria-hidden='true' class='fa fa-youtube-play'></i>
+</a>
+</li>
+<li class='list-inline-item'>
+<a class='btn-floating btn-sm rgba-white-slight mx-1'>
+<i aria-hidden='true' class='fa fa-twitter'></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<!-- Grid column -->
+</div>
+<!-- Grid row -->
+</div>
+<!-- Footer Links -->
+</footer>
+<!-- Footer -->
+<!-- ===================footer_end=========================== -->
+<!-- popup -->
+<!-- popup -->
+<!-- =====================banner_end===================== -->
+<script src='https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js' type='text/javascript'></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.12/dist/js/bootstrap-select.min.js"></script>
+<script src="/javascripts/libs/bootstrap-select-country.min.js"></script>
+<script src="/javascripts/site.js"></script>
+<script>
+  $(document).ready(function(){
+    $('#datepicker').datepicker({
+      uiLibrary: 'bootstrap4'
+    });
+  
+  
+    // $(".countrypicker").selectpicker();
+    // $('.countrypicker').countrypicker({
+    //     flag: true
+    //   });
+  })
+</script>
+<!-- calander_end -->
+
+</div>
+<script src="/javascripts/common.js" type="text/javascript"></script>
+</div>
+</body>
+</html>

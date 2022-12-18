@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: CorelDRAW -->
+<svg
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:cc="http://web.resource.org/cc/"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    xmlns:ns1="http://sozi.baierouge.fr"
+    style="fill-rule:evenodd;text-rendering:geometricPrecision;image-rendering:optimizeQuality;clip-rule:evenodd;shape-rendering:geometricPrecision"
+    xml:space="preserve"
+    viewBox="0 0 6.46216 4.31765"
+  >
+ <defs
+    >
+  <style
+        type="text/css"
+      >
+    .str1 {stroke:#1F1A17;stroke-width:0.0286362}
+    .str0 {stroke:white;stroke-width:0.0286362}
+    .fil2 {fill:#1F1A17}
+    .fil0 {fill:#EAE342}
+    .fil1 {fill:white}
+  </style
+    >
+ </defs
+  >
+ <g
+      id="Ebene_x0020_1"
+    >
+  <g
+        id="_161378960"
+      >
+   <rect
+          id="_161099504"
+          class="fil0 str0"
+          rx=".55944"
+          ry=".55944"
+          height="4.289"
+          width="6.4335"
+          y=".014318"
+          x=".014318"
+      />
+   <rect
+          id="_161099432"
+          class="fil1 str0"
+          rx=".18648"
+          ry=".18648"
+          height="2.8324"
+          width="2.4219"
+          y=".38195"
+          x=".36631"
+      />
+   <g
+        >
+    <circle
+            id="_161099384"
+            cy="1.2031"
+            cx="1.5994"
+            r=".67599"
+            class="fil2 str1"
+        />
+    <path
+            id="_161099336"
+            d="m0.50382 3.2311h2.1678v-0.54778c0-0.30128-0.2465-0.54778-0.54778-0.54778h-1.0722c-0.30128 0-0.54778 0.2465-0.54778 0.54778v0.54778z"
+            class="fil2 str1"
+        />
+   </g
+      >
+   <rect
+          id="_161099240"
+          class="fil1 str0"
+          rx=".13986"
+          ry=".13986"
+          height=".27972"
+          width="2.6806"
+          y=".88526"
+          x="3.3055"
+      />
+   <rect
+          id="_161099168"
+          class="fil1 str0"
+          rx=".13986"
+          ry=".13986"
+          height=".27972"
+          width="2.6806"
+          y="2.3171"
+          x="3.3055"
+      />
+   <rect
+          id="_161099096"
+          class="fil1 str0"
+          rx=".13986"
+          ry=".13986"
+          height=".27972"
+          width="2.6806"
+          y="1.6011"
+          x="3.3055"
+      />
+  </g
+    >
+ </g
+  >
+<metadata
+    ><rdf:RDF
+      ><cc:Work
+        ><dc:format
+          >image/svg+xml</dc:format
+        ><dc:type
+            rdf:resource="http://purl.org/dc/dcmitype/StillImage"
+        /><cc:license
+            rdf:resource="http://creativecommons.org/licenses/publicdomain/"
+        /><dc:publisher
+          ><cc:Agent
+              rdf:about="http://openclipart.org/"
+            ><dc:title
+              >Openclipart</dc:title
+            ></cc:Agent
+          ></dc:publisher
+        ><dc:title
+          >ID Card</dc:title
+        ><dc:date
+          >2012-02-20T07:45:22</dc:date
+        ><dc:description
+        /><dc:source
+          >https://openclipart.org/detail/168412/id-card-by-zorro</dc:source
+        ><dc:creator
+          ><cc:Agent
+            ><dc:title
+              >zorro</dc:title
+            ></cc:Agent
+          ></dc:creator
+        ><dc:subject
+          ><rdf:Bag
+            ><rdf:li
+              >Passprt Ausweis</rdf:li
+            ></rdf:Bag
+          ></dc:subject
+        ></cc:Work
+      ><cc:License
+          rdf:about="http://creativecommons.org/licenses/publicdomain/"
+        ><cc:permits
+            rdf:resource="http://creativecommons.org/ns#Reproduction"
+        /><cc:permits
+            rdf:resource="http://creativecommons.org/ns#Distribution"
+        /><cc:permits
+            rdf:resource="http://creativecommons.org/ns#DerivativeWorks"
+        /></cc:License
+      ></rdf:RDF
+    ></metadata
+  ></svg
+>

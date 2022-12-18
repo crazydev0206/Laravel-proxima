@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+<meta charset='utf-8'>
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<title>
+RideSharing
+</title>
+<link crossorigin='anonymous' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css' rel='stylesheet'>
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+<link href="stylesheets/site.css" rel="stylesheet" />
+<link href='css/all.min.css' rel='stylesheet' type='text/css'>
+<link href='css/fonts.css' rel='stylesheet' type='text/css'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Rubik:300,400,500,600%7CIBM+Plex+Sans:300,400,500,600,700' rel='stylesheet'>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.12/dist/css/bootstrap-select.min.css" rel="stylesheet" />
+<link href="https://unpkg.com/bootstrap-select-country@4.1.0/dist/css/bootstrap-select-country.min.css" rel="stylesheet" />
+<!-- <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
+<script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- calaner -->
+<link href='https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css' rel='stylesheet' type='text/css'>
+<!-- calander -->
+    
+    <style>
+        @font-face {
+  font-family: myFirstFont;
+  src: url(fonts/Futura.ttf);
+}
+        
+        h3, h5{
+            font-family: Futura;
+        }
+        .home__search__banner .inputWithIcon .form-field-img {
+    top: 12px;
+    width: 28px;
+        }
+        
+        .home__search__banner .input-group.gj-datepicker-bootstrap .input-group-append button .gj-icon {
+    top: 13px;
+}
+        
+        .form-date-picker-wrapper .close-date-btn {
+            top: 12px;
+        }
+        
+        .landing-search-icon.btn.wrn-btn{
+            padding-top: 10px;
+        }
+        
+        .home__header__main .navbar-nav.header-left-side .nav-item{
+            margin-right: 15px;
+        }
+        
+        input[type="text"]{
+            border-radius: 10px;
+        }
+        
+        @media only screen and (min-width:1400px) {
+            .home__banner__box .carousel-item {
+            height: 550px;
+            min-height: 550px;
+        }
+            
+            .landing-search-icon.btn.wrn-btn{
+            padding-top: 10px;
+                padding-bottom: 10px;
+        }
+        }
+        
+        @media only screen and (max-width:1300px){
+            .home__banner__box .carousel-item {
+            height: 440px;
+            min-height: 440px;
+        }
+        }
+        
+        @media only screen and (min-width:1200px) {
+            
+                div.card__ride div.list-group .media-body p.font-weight-bold{
+                    padding-top:.5rem;
+                }
+            
+            .landing-search-icon.btn.wrn-btn{
+            padding-top: 9.7px;
+                padding-bottom: 9.64px;
+        }
+        }
+        
+        @media only screen and (min-width:768px) {
+        .wrn-btn.wrn-btn-r-radius {
+    border-top-right-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+        }
+        }
+        
+        @media (max-width: 1000px) {
+            
+            .landing-search-icon.btn.wrn-btn{
+            padding-top: 9.8px;
+                padding-bottom: 9.8px;
+        }
+        }
+        
+        @media (max-width: 990px) and (min-width: 762px) {
+            .home__banner__box .carousel-item {
+            height: 350px;
+            min-height: 350px;
+        }
+            
+            .landing-search-icon.btn.wrn-btn{
+            padding-top: 9.6px;
+                padding-bottom: 9.6px;
+        }
+        }
+        
+        @media (max-width: 991px) {
+.nav-link-highlight .highlight {
+    top: 13px;
+    right: auto;
+    left: 64px;
+        }
+        
+        @media all and (max-width: 768px) {
+      .home__search__banner .search__section__submit {
+        flex-basis: 100%;
+        max-width: 100%; } }
+  .home__search__banner .search__section__toggle {
+    flex-basis: 40px;
+    max-width: 40px; }
+    .home__search__banner .search__section__toggle .btn-toggle {
+      background: #f0f0f0;
+      border-radius: 0;
+      font-size: 0.77em;
+      width: 100%;
+      border-top: 1px solid #aaa;
+      border-bottom: 1px solid #aaa; }
+    @media all and (max-width: 768px) {
+      .home__search__banner .search__section__toggle {
+        flex-basis: 100%;
+        max-width: 100%; }
+        .home__search__banner .search__section__toggle .btn-toggle {
+          border-bottom: none !important;
+          border-left-color: #aaa;
+          border-right-color: #aaa; } }
+  .home__search__banner .search__section__to, .home__search__banner .search__section__from, .home__search__banner .search__section__date {
+    flex-basis: calc((100% - 90px)/3);
+    max-width: calc((100% - 90px)/3); }
+    @media all and (max-width: 768px) {
+      .home__search__banner .search__section__to, .home__search__banner .search__section__from, .home__search__banner .search__section__date {
+        flex-basis: 100%;
+        max-width: 100%; } }
+            
+            @media all and (max-width: 459px) {
+      .even__more__list li {
+        flex-basis: 50%;
+        max-width: 50%; } }
+    </style>
+</head>
+<body>
+<div class='body__wrapper'>
+<div class='header__content'>
+<!-- =====================Navbar=========================== -->
+<div class='home__header__main'>
+<div class='container-fluid'>
+<nav class='navbar navbar-expand-lg navbar-light bg-light navbar-custom-header'>
+<a class='navbar-brand' href='#'>
+<img src="images/logo/main-logo.png" alt="Main logo" />
+</a>
+<button aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation' class='navbar-toggler' data-target='#navbarSupportedContent' data-toggle='collapse' type='button'>
+<span class='navbar-toggler-icon'></span>
+</button>
+<div class='collapse navbar-collapse' id='navbarSupportedContent'>
+<ul class='navbar-nav mr-auto header-left-side'>
+<li class='nav-item'>
+<a class='nav-link nav-link-highlight' href='#'>
+<span class='highlight' style="border-radius: 2px;">New</span>
+<span class='text'>Students</span>
+</a>
+</li>
+<li class='nav-item'>
+<a class='nav-link' href='#'><img alt='' class='mr-2' height='16' src='images/plus.png' width='16'><span class='text'>Post a ride</span>
+</a>
+</li>
+<li class='nav-item'>
+<a class='nav-link' href='#'><i aria-hidden='true' class='fa fa-search pr-2' style="font-weight: normal; font-size:15px;"></i><span class='text'>Find a ride</span>
+</a>
+</li>
+</ul>
+<form class='form-inline my-2 my-lg- nav-right-section'>
+<a class='nav-link login_text nav-login-btn' href='#'><i aria-hidden='true' class='fa fa-user-o pr-2'></i>Log in / Sign up
+</a>
+<select class='nav-link login_text nav-login-btn form-control form-country-selector' style="padding-top: 0.4em; height: 37.5px;">
+    <option>English</option>
+    </select>
+</form>
+</div>
+</nav>
+</div>
+</div>
+<!-- =====================Navbar_end======================= -->
+
+</div>
+<div class='body__content'>
+<!-- =====================banner========================= -->
+<section class='home__banner__box'>
+<div class='carousel slide carousel-fade' data-ride='carousel' id='carouselExampleFade'>
+<div class='carousel-inner'>
+<div class='carousel-item active' style='background-image: url(&#39;images/home-banner-image.jpg&#39;)'>
+<img alt='...' class='w-100' src='images/home-banner-image.jpg'>
+</div>
+</div>
+</div>
+<section class='search-sec'>
+<div class='container'>
+<form action='#' method='post' novalidate='novalidate'>
+<div class='row'>
+<div class='col-lg-12'>
+<h3 class='banner_text pb-3 mb-3'>Ridesharing as it was meant to be: Safe, Affordable, Reliable</h3>
+<div class='home__search__banner'>
+<div class='search__section__from'>
+<div class='inputWithIcon'>
+<div class='input-group input-group-double'>
+<input class='form-control form-control-left' placeholder='From' type='text'>
+</div>
+<img alt='' class='location form-field-img' src='images/new-21-search-bar-from-1.png'>
+</div>
+</div>
+<div class='search__section__toggle'>
+<button class='btn btn-rl-icon btn-toggle' type="button">
+<span class='fa fa-arrow-right'></span>
+<div class='clearfix'></div>
+<span class='fa fa-arrow-left'></span>
+</button>
+</div>
+<div class='search__section__to'>
+<div class='inputWithIcon form-bg-white'>
+<input class='form-control form-control-middle' placeholder='To' type='text'>
+<img alt='' class='location form-field-img to' src='images/new-20-location-pin-white-background.png'>
+</div>
+</div>
+<div class='search__section__date'>
+<div class='form-bg-white form-date-picker-wrapper'>
+<input class='form-control form-control-last form-date-picker-close' id='datepicker' placeholder='Date (optional)' style="padding-left: 0px;">
+<a class='close-date-btn' href='#' id='close-landing-search-date'>
+<span class='fa fa-times'></span>
+</a>
+</div>
+</div>
+<div class='search__section__submit'>
+<button class='btn btn-primary wrn-btn wrn-btn-r-radius landing-search-icon' placeholder='To' type='button'>
+<i aria-hidden='true' class='fa fa-search'></i>
+</button>
+</div>
+</div>
+</div>
+</div>
+</form>
+</div>
+</section>
+</section>
+<!-- =======================section_1================================ -->
+<div class='full-card full__search__option'>
+<div class='container'>
+<h5 class='offer mb-3'>We are proud to offer more search options that any other ridessharing website in Canada.</h5>
+<div class='card-deck'>
+<div class='card'>
+<div class='card-body'>
+<img alt='' class='section-icon-img' src='images/49-pink-ride.png'>
+<h5 class='card-title pink'>Pink rides</h5>
+<p class='card-text'>Perfect for those who want an all-female ride</p>
+</div>
+</div>
+<div class='card'>
+<!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+<div class='card-body'>
+<img alt='' class='section-icon-img' src='images/6-travelling-in-peace.png'>
+<h5 class='card-title extra light-blue-text'>Extra-care rides</h5>
+<p class='card-text'>Select your preferred type of driver, passengers, and vehicle. Perfect for young travelers, parents who want to ensure safety of their little ones, and anyone who wants to feel safe and secure while travelling alone.</p>
+</div>
+</div>
+<div class='card'>
+<!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+<div class='card-body'>
+<img alt='' class='section-icon-img' src='images/49-pink-ride.png'>
+<h5 class='card-title'>Customize your ride</h5>
+<p class='card-text'>Build your own ride: your are the boss of your own environment. Over 15 search criteria to search from</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- =======================section_1_end============================ -->
+<!-- ======================section_2================================= -->
+<div class='home__safety home__section--lgrey'>
+<div class='container'>
+<h5 class='offer pt-3 page-section-title'>Safety first</h5>
+<p class='safe pb-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+<div class='safety__list'>
+<div class='row'>
+<div class='col-12 col-md-6'>
+<div class='media'>
+<div class='media-left'>
+<img alt='' class='icon_img' src='images/5-travelling safe.png'>
+<!-- <img src="https://pbs.twimg.com/media/EGHYvttU4AAYKb7?format=jpg&name=large" class="d-block w-100" alt="..."> -->
+</div>
+<div class='media-body'>
+<h5>Profile verfication</h5>
+<p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+</div>
+</div>
+</div>
+<div class='col-12 col-md-6'>
+<div class='media'>
+<div class='media-left'>
+<img alt='' class='icon_img' src='images/71-2-policies-that-protect-you.png'>
+</div>
+<div class='media-body'>
+<h5>Policies that protect you</h5>
+<p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+</div>
+</div>
+</div>
+</div>
+<div class='row'>
+<div class='col-12 col-md-6'>
+<div class='media'>
+<div class='media-left'>
+<img alt='' class='icon_img' src='images/71-3-here-to-help.png'>
+<!-- <img src="https://pbs.twimg.com/media/EGHYvttU4AAYKb7?format=jpg&name=large" class="d-block w-100" alt="..."> -->
+</div>
+<div class='media-body'>
+<h5>We're here to help</h5>
+<p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+</div>
+</div>
+</div>
+<div class='col-12 col-md-6'>
+<div class='media'>
+<div class='media-left'>
+<img alt='' class='icon_img' src='images/54-insurance.png'>
+</div>
+<div class='media-body'>
+<h5>Car insurance</h5>
+<p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ===================section_2_end======================= -->
+<!-- ===================section_3=========================== -->
+<div class='full-card3 home__reason__sharing'>
+<div class='container'>
+<h5 class='offer pb-4 mb-0 page-section-title'>Reasons to love ridesharing</h5>
+<div class='card-deck'>
+<div class='card text-center'>
+<div class='card-body'>
+<img alt='' class='icon_img3' src='images/5-travelling safe.png'>
+<h5 class='card-title pt-2'>Safe</h5>
+<p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+</div>
+</div>
+<div class='card text-center'>
+<!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+<div class='card-body'>
+<img alt='' class='icon_img3' src='images/7-affordable.png'>
+<h5 class='card-title pt-2'>Affordable</h5>
+<p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+</div>
+</div>
+<div class='card text-center'>
+<!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+<div class='card-body'>
+<img alt='' class='icon_img3' src='images/8-reliable.png'>
+<h5 class='card-title pt-2'>Reliable</h5>
+<p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ===================section_3_end======================= -->
+<!-- ===================section_4=========================== -->
+<div class='recent__rides home__section--lgrey pt-4 pb-4'>
+<div class='container'>
+<div class='row pt-0'>
+<div class='col-md-12 col-lg-8'>
+<h5 class='pb-2 page-section-title'>Recent rides</h5>
+<div class='recent__ride__container'>
+<div class='recent__ride__row'>
+<div class='row'>
+<div class='col-3 col-md-1'>
+<div class='tiny__calendar'>
+<span class='tiny__calendar__month'>Jan</span>
+<span class='tiny__calendar__day'>06</span>
+</div>
+</div>
+<div class='col-8 col-md-4 p-0'>
+<h6 class='card-title m-0'>GKT:M.W.F School Run</h6>
+<p class='card-text'>Lorem ipsum dolor sit amet</p>
+</div>
+<div class='col-1 col-md-1 p-0'>
+<i aria-hidden='true' class='fa fa-chevron-right pt-2 extra'></i>
+</div>
+<div class='col-7 col-md-4 offset-3 offset-md-0 pl-0'>
+<h6 class='card-title m-0'>Toronto</h6>
+<p class='card-text'>Lorem ipsum dolor sit amet</p>
+</div>
+<div class='col-2 col-md-2'>
+<h6 class='pt-2'>$70</h6>
+</div>
+</div>
+</div>
+<div class='recent__ride__row'>
+<div class='row'>
+<div class='col-3 col-md-1'>
+<div class='tiny__calendar'>
+<span class='tiny__calendar__month'>Jan</span>
+<span class='tiny__calendar__day'>06</span>
+</div>
+</div>
+<div class='col-8 col-md-4 p-0'>
+<h6 class='card-title m-0'>GKT:M.W.F School Run</h6>
+<p class='card-text'>Lorem ipsum dolor sit amet</p>
+</div>
+<div class='col-1 col-md-1 p-0'>
+<i aria-hidden='true' class='fa fa-chevron-right pt-2 extra'></i>
+</div>
+<div class='col-7 col-md-4 offset-3 offset-md-0 pl-0'>
+<h6 class='card-title m-0'>Toronto</h6>
+<p class='card-text'>Lorem ipsum dolor sit amet</p>
+</div>
+<div class='col-2 col-md-2'>
+<h6 class='pt-2'>$70</h6>
+</div>
+</div>
+</div>
+<div class='recent__ride__row'>
+<div class='row'>
+<div class='col-3 col-md-1'>
+<div class='tiny__calendar'>
+<span class='tiny__calendar__month'>Jan</span>
+<span class='tiny__calendar__day'>06</span>
+</div>
+</div>
+<div class='col-8 col-md-4 p-0'>
+<h6 class='card-title m-0'>GKT:M.W.F School Run</h6>
+<p class='card-text'>Lorem ipsum dolor sit amet</p>
+</div>
+<div class='col-1 col-md-1 p-0'>
+<i aria-hidden='true' class='fa fa-chevron-right pt-2 extra'></i>
+</div>
+<div class='col-7 col-md-4 offset-3 offset-md-0 pl-0'>
+<h6 class='card-title m-0'>Toronto</h6>
+<p class='card-text'>Lorem ipsum dolor sit amet</p>
+</div>
+<div class='col-2 col-md-2'>
+<h6 class='pt-2'>$70</h6>
+</div>
+</div>
+</div>
+<div class='recent__ride__row'>
+<div class='row'>
+<div class='col-3 col-md-1'>
+<div class='tiny__calendar'>
+<span class='tiny__calendar__month'>Jan</span>
+<span class='tiny__calendar__day'>06</span>
+</div>
+</div>
+<div class='col-8 col-md-4 p-0'>
+<h6 class='card-title m-0'>GKT:M.W.F School Run</h6>
+<p class='card-text'>Lorem ipsum dolor sit amet</p>
+</div>
+<div class='col-1 col-md-1 p-0'>
+<i aria-hidden='true' class='fa fa-chevron-right pt-2 extra'></i>
+</div>
+<div class='col-7 col-md-4 offset-3 offset-md-0 pl-0'>
+<h6 class='card-title m-0'>Toronto</h6>
+<p class='card-text'>Lorem ipsum dolor sit amet</p>
+</div>
+<div class='col-2 col-md-2'>
+<h6 class='pt-2'>$70</h6>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='col-md-12 col-lg-4'>
+<!-- <div class="container-fluid pb-video-container"> -->
+<div>
+<div class='pb-row'>
+<div class='pb__video__container'>
+<div class='pb-video' id='home-pb-video'>
+<div class='pb__video__control'>
+<a class='control-link' href='#'>
+<span class='fa fa-play'></span>
+</a>
+</div>
+<div class='pb__video__cover' style='background-image: url(&#39;https://img.youtube.com/vi/K68UrdUOr2Y/maxresdefault.jpg&#39;)'></div>
+<div class='pb__video__content'>
+<div class='embed-responsive embed-responsive-16by9'>
+<iframe allowfullscreen='' class='pb-video-frame embed-responsive-item' frameborder='0' height='230' src='https://www.youtube.com/embed/K68UrdUOr2Y?list=RDzuAcaBkcYGE?ecver=1' width='100%'></iframe>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- </div> -->
+</div>
+</div>
+</div>
+</div>
+<!-- ===================section_4_end======================= -->
+<!-- ===================section_5======================= -->
+<div class='home__ride__work'>
+<div class='container'>
+<div class='row mb-4'>
+<div class='col-12'>
+<h5 class='offer pt-5 page-section-title'>How does ridessharing work</h5>
+<p class='safe m-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-md-6'>
+<div class='card card-default card-list-group-no-border card__ride'>
+<div class='card-header text-center'>
+<h5 class='card-title pt-0 m-0'>For passengers</h5>
+<p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+</div>
+<div class='card-body'>
+<div class='list-group'>
+<div class='list-group-item'>
+<div class='media'>
+<div class='media-left'>
+<img alt='' class='icon_img' src='images/43-passengers.png'>
+<!-- <img src="https://pbs.twimg.com/media/EGHYvttU4AAYKb7?format=jpg&name=large" class="d-block w-100" alt="..."> -->
+</div>
+<div class='media-body'>
+<p class='font-weight-bold m-0'>Lorem ipsum dolo</p>
+<p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+</div>
+</div>
+</div>
+<div class='list-group-item'>
+<div class='media'>
+<div class='media-left'>
+<img alt='' class='icon_img' src='images/43-passengers.png'>
+<!-- <img src="https://pbs.twimg.com/media/EGHYvttU4AAYKb7?format=jpg&name=large" class="d-block w-100" alt="..."> -->
+</div>
+<div class='media-body'>
+<p class='font-weight-bold m-0'>Lorem ipsum dolo</p>
+<p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+</div>
+</div>
+</div>
+<div class='list-group-item'>
+<div class='media'>
+<div class='media-left'>
+<img alt='' class='icon_img' src='images/43-passengers.png'>
+<!-- <img src="https://pbs.twimg.com/media/EGHYvttU4AAYKb7?format=jpg&name=large" class="d-block w-100" alt="..."> -->
+</div>
+<div class='media-body'>
+<p class='font-weight-bold m-0'>Lorem ipsum dolo</p>
+<p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+</div>
+</div>
+</div>
+<div class='list-group-item'>
+<div class='media'>
+<div class='media-left'>
+<img alt='' class='icon_img' src='images/43-passengers.png'>
+<!-- <img src="https://pbs.twimg.com/media/EGHYvttU4AAYKb7?format=jpg&name=large" class="d-block w-100" alt="..."> -->
+</div>
+<div class='media-body'>
+<p class='font-weight-bold m-0'>Lorem ipsum dolo</p>
+<p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+</div>
+</div>
+</div>
+<div class='list-group-item'>
+<div class='media'>
+<div class='media-left'>
+<img alt='' class='icon_img' src='images/43-passengers.png'>
+<!-- <img src="https://pbs.twimg.com/media/EGHYvttU4AAYKb7?format=jpg&name=large" class="d-block w-100" alt="..."> -->
+</div>
+<div class='media-body'>
+<p class='font-weight-bold m-0'>Lorem ipsum dolo</p>
+<p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='col-md-6'>
+<div class='card card-default card-list-group-no-border card__ride'>
+<div class='card-header text-center'>
+<h5 class='card-title pt-0 m-0'>For drivers</h5>
+<p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+</div>
+<div class='card-body'>
+<div class='list-group'>
+<div class='list-group-item'>
+<div class='media'>
+<div class='media-left'>
+<img alt='' class='icon_img' src='images/42-driver.png'>
+</div>
+<div class='media-body'>
+<p class='font-weight-bold m-0'>Lorem ipsum dolo</p>
+<p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+</div>
+</div>
+</div>
+<div class='list-group-item'>
+<div class='media'>
+<div class='media-left'>
+<img alt='' class='icon_img' src='images/42-driver.png'>
+</div>
+<div class='media-body'>
+<p class='font-weight-bold m-0'>Lorem ipsum dolo</p>
+<p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+</div>
+</div>
+</div>
+<div class='list-group-item'>
+<div class='media'>
+<div class='media-left'>
+<img alt='' class='icon_img' src='images/42-driver.png'>
+</div>
+<div class='media-body'>
+<p class='font-weight-bold m-0'>Lorem ipsum dolo</p>
+<p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+</div>
+</div>
+</div>
+<div class='list-group-item'>
+<div class='media'>
+<div class='media-left'>
+<img alt='' class='icon_img' src='images/42-driver.png'>
+</div>
+<div class='media-body'>
+<p class='font-weight-bold m-0'>Lorem ipsum dolo</p>
+<p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+</div>
+</div>
+</div>
+<div class='list-group-item'>
+<div class='media'>
+<div class='media-left'>
+<img alt='' class='icon_img' src='images/42-driver.png'>
+</div>
+<div class='media-body'>
+<p class='font-weight-bold m-0'>Lorem ipsum dolo</p>
+<p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ===================section_5_end======================= -->
+<!-- ===================section_6======================= -->
+<div class='post mt-5 pb-5'>
+<div class='container-fluid'>
+<h5 class='post-text page-section-title'>Where are you going?</h5>
+<p class='m-0'>Share your seats Lorum ipsum is simply dummy text of the printing and typesetting indesutry.</p>
+<p class='text-center mt-3'>
+<a class='btn btn-outline btn-outline-white btn-round' href='#'>
+Post a Ride
+</a>
+</p>
+</div>
+</div>
+<!-- ===================section_6_end======================= -->
+<!-- ===================section_7=========================== -->
+<div class='section-7 home__more__reason'>
+<div class='container'>
+<h5 class='offer pt-5 page-section-title'>Even more reasons to travel with us</h5>
+<p class='safe mb-4'>Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
+<div class='even__more__wrapper'>
+<ul class='ul__list even__more__list'>
+<li class='li'>
+<div class='travel text-center'>
+<div class='travel-body'>
+<img alt='' class='icon_img3' src='images/51-build-your-own-ride-version-2.png'>
+<h6 class='title pt-2'>Our members</h6>
+<p class='sub-text'>Lorem ipsum dolor sit amet, consectetur</p>
+<button class='btn btn-outline-primary' type='button'>Read More</button>
+</div>
+</div>
+</li>
+<li class='li'>
+<div class='travel text-center'>
+<div class='travel-body'>
+<img alt='' class='icon_img3' src='images/73-driver-license-verification.png'>
+<h6 class='title pt-2'>Driver's License Verification</h6>
+<p class='sub-text'>Lorem ipsum dolor sit</p>
+<button class='btn btn-outline-primary' type='button'>Read More</button>
+</div>
+</div>
+</li>
+<li class='li'>
+<div class='travel text-center'>
+<div class='travel-body'>
+<img alt='' class='icon_img3' src='images/75-quality-control.png'>
+<h6 class='title pt-2'>Quality Control</h6>
+<p class='sub-text'>Lorem ipsum dolor sit amet, consectetur</p>
+<button class='btn btn-outline-primary' type='button'>Read More</button>
+</div>
+</div>
+</li>
+<li class='li'>
+<div class='travel text-center'>
+<div class='travel-body'>
+<img alt='' class='icon_img3' src='images/74-privacy-policy.png'>
+<h6 class='title pt-2'>Privacy Policy</h6>
+<p class='sub-text'>Lorem ipsum dolor sit amet, consectetur</p>
+<button class='btn btn-outline-primary' type='button'>Read More</button>
+</div>
+</div>
+</li>
+<li class='li'>
+<div class='travel text-center'>
+<div class='travel-body'>
+<img alt='' class='icon_img3' src='images/51-build-your-own-ride.png'>
+<h6 class='title pt-2'>Get a ride</h6>
+<p class='sub-text'>Lorem ipsum dolor sit amet, consectetur</p>
+<button class='btn btn-outline-primary' type='button'>Read More</button>
+</div>
+</div>
+</li>
+<li class='li'>
+<div class='travel text-center'>
+<div class='travel-body'>
+<img alt='' class='icon_img3' src='images/5-travelling safe.png'>
+<h6 class='title pt-2'>Safe</h6>
+<p class='sub-text'>Lorem ipsum dolor sit amet, consectetur</p>
+<button class='btn btn-outline-primary' type='button'>Read More</button>
+</div>
+</div>
+</li>
+<li class='li'>
+<div class='travel text-center'>
+<div class='travel-body'>
+<img alt='' class='icon_img3' src='images/69-4-easy-to-use.png'>
+<h6 class='title pt-2'>The Best Prices</h6>
+<p class='sub-text'>Lorem ipsum dolor sit amet, consectetur</p>
+<button class='btn btn-outline-primary' type='button'>Read More</button>
+</div>
+</div>
+</li>
+<li class='li'>
+<div class='travel text-center'>
+<div class='travel-body'>
+<img alt='' class='icon_img3' src='images/69-1-easy-to-use.png'>
+<h6 class='title pt-2'>Easy to use</h6>
+<p class='sub-text'>Lorem ipsum dolor sit amet, consectetur</p>
+<button class='btn btn-outline-primary' type='button'>Read More</button>
+</div>
+</div>
+</li>
+<li class='li'>
+<div class='travel text-center'>
+<div class='travel-body'>
+<img alt='' class='icon_img3' src='images/8-reliable.png'>
+<h6 class='title pt-2'>Reliable</h6>
+<p class='sub-text'>Lorem ipsum dolor sit amet, consectetur</p>
+<button class='btn btn-outline-primary' type='button'>Read More</button>
+</div>
+</div>
+</li>
+<li class='li'>
+<div class='travel text-center'>
+<div class='travel-body'>
+<img alt='' class='icon_img3' src='images/82-3-save-hundreds-of-dollars.png'>
+<h6 class='title pt-2'>Affordable</h6>
+<p class='sub-text'>Lorem ipsum dolor sit amet, consectetur</p>
+<button class='btn btn-outline-primary' type='button'>Read More</button>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- ===================section_7_end======================= -->
+<!-- ===================section_8=========================== -->
+<div class='section-8 home__join'>
+<div class='container'>
+<div class='row'>
+<div class='col-md-5'>
+<div class='media-box-right'>
+<div class='media'>
+<div class='media-left'><i aria-hidden='true' class='fa fa-lightbulb-o pr-3 fa-3x'></i></div>
+<div class='media-body align-self-center'>
+Join the movement
+</div>
+</div>
+</div>
+</div>
+<div class='col-md-5 ml-1'>
+<p class='m-0'>
+Over
+<b>700,000</b>
+Canadians have used the ridesharing service so far, and counting
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- ===================section_8_end=========================== -->
+<!-- ===================section_9=========================== -->
+<div class='home__testimonial'>
+<div class='container'>
+<h5 class='offer pt-5 page-section-title'>Satisfied members</h5>
+<p class='safe pb-4 m-0'>Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
+<div class='row'>
+<div class='col-md-1'>
+<img alt='' class='icon_img' src='images/14-brunette-man.png'>
+<!-- <img src="https://pbs.twimg.com/media/EGHYvttU4AAYKb7?format=jpg&name=large" class="d-block w-100" alt="..."> -->
+</div>
+<div class='col-md-5'>
+<div class='card__message'>
+<div class='card-body'>
+<h6>Michael Holz, 30 year old, a member from canada</h6>
+<p class='card-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since...</p>
+</div>
+</div>
+</div>
+<div class='col-md-1'>
+<img alt='' class='icon_img' src='images/14-brunette-man.png'>
+</div>
+<div class='col-md-5'>
+<div class='card__message'>
+<div class='card-body'>
+<h6>Michael Holz, 30 year old, a member from canada</h6>
+<p class='card-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since...</p>
+</div>
+</div>
+</div>
+</div>
+<div class='row pt-4'>
+<div class='col-md-1'>
+<img alt='' class='icon_img' src='images/14-brunette-man.png'>
+<!-- <img src="https://pbs.twimg.com/media/EGHYvttU4AAYKb7?format=jpg&name=large" class="d-block w-100" alt="..."> -->
+</div>
+<div class='col-md-5'>
+<div class='card__message'>
+<div class='card-body'>
+<h6>Michael Holz, 30 year old, a member from canada</h6>
+<p class='card-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since...</p>
+</div>
+</div>
+</div>
+<div class='col-md-1'>
+<img alt='' class='icon_img' src='images/14-brunette-man.png'>
+</div>
+<div class='col-md-5'>
+<div class='card__message'>
+<div class='card-body'>
+<h6>Michael Holz, 30 year old, a member from canada</h6>
+<p class='card-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since...</p>
+</div>
+</div>
+<p class='font-weight-bold text-right pt-2'><i aria-hidden='true' class='fa fa-angle-double-right pr-2'></i>Read more stories
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- ===================section_9_end=========================== -->
+<!-- ===================section_10=============================== -->
+<div class='section-10 home__sharing__news'>
+<div class='container'>
+<div class='row'>
+<div class='col-12'>
+<h5 class='offer pt-5 mb-4 page-section-title'>Ridesharing in the news</h5>
+<div class='row'>
+<div class='col-12'>
+<ul class='home__news__list'>
+<li>
+<div class='home__news'>
+<img src="images/news/global-news.png" alt="Global news" />
+</div>
+</li>
+<li style="padding-top: 12px;">
+<div class='home__news'>
+<img src="images/news/cbc.png" alt="Cbc" />
+</div>
+</li>
+<li style="padding-top: 14px;">
+<div class='home__news'>
+<img src="images/news/star.png" alt="Star" />
+</div>
+</li>
+<li style="padding-top: 13px;">
+<div class='home__news'>
+<img src="images/news/sun.png" alt="Sun" />
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ===================section_10_end=========================== -->
+<!-- ===================section_11=========================== -->
+<div class='home__easy__use home__section--lgrey'>
+<div class='container'>
+<h5 class='offer page-section-title'>Easy to use</h5>
+<p class='safe pb-4 m-0'>We've made it realy easy for you to share rides with other people</p>
+<div class='row'>
+<div class='col-md-1'>
+<img alt='' class='icon_img' src='images/51-build-your-own-ride-version-2.png'>
+<!-- <img src="https://pbs.twimg.com/media/EGHYvttU4AAYKb7?format=jpg&name=large" class="d-block w-100" alt="..."> -->
+</div>
+<div class='col-md-5'>
+<h6>Trips at your fingertips</h6>
+<p class='card-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's ...</p>
+</div>
+<div class='col-md-1'>
+<img alt='' class='icon_img' src='images/89-2-pricing-and-plans.png'>
+</div>
+<div class='col-md-5'>
+<h6>Trips at your fingertips</h6>
+<p class='card-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's ...</p>
+</div>
+</div>
+<div class='row pt-4'>
+<div class='col-md-1'>
+<img alt='' class='icon_img' src='images/53-regular-rideshare.png'>
+<!-- <img src="https://pbs.twimg.com/media/EGHYvttU4AAYKb7?format=jpg&name=large" class="d-block w-100" alt="..."> -->
+</div>
+<div class='col-md-5'>
+<h6>Create and join trips in minutes</h6>
+<p class='card-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's ...</p>
+</div>
+<div class='col-md-1'>
+<img alt='' class='icon_img' src='images/72-reviews.png'>
+</div>
+<div class='col-md-5'>
+<h6>Review your experience</h6>
+<p class='card-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's ...</p>
+</div>
+</div>
+</div>
+</div>
+<!-- ===================section_11_end=========================== -->
+<!-- ===================section_12=========================== -->
+<div class='home__section--transparent'>
+<div class='container'>
+<h5 class='offer page-section-title'>Built for reliability</h5>
+<p class='safe pb-4 m-0'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+<div class='row'>
+<!--
+<div class="col-md-1">
+<img class="icon_img" src="images/01.png" alt="">
+</div>
+-->
+<div class='col-md-6'>
+<div class='card card-default card-spl card-spl-body-up'>
+<div class='card-header'>
+<h6>Reliable for passengers</h6>
+</div>
+<div class='card-body'>
+<p class='card-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+<ul>
+<li>
+<p class='card-text'>Lorem Ipsum is simply dummy text of the printing</p>
+</li>
+<li>
+<p class='card-text'>and typesetting industry. Lorem Ipsum has been</p>
+</li>
+<li>
+<p class='card-text'>the industry's standard dummy text ever since the</p>
+</li>
+<li>
+<p class='card-text'>1500s, when an unknown printer took a galley of</p>
+</li>
+<li>
+<p class='card-text'>type and scrambled it to make a type specimen book.</p>
+</li>
+<li>
+<p class='card-text'>It has survived not only five centuries, but also the leap</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+<div class="col-md-1">
+<img class="icon_img" src="images/01.png" alt="">
+</div>
+-->
+<div class='col-md-6'>
+<div class='card card-default card-spl card-spl-body-up'>
+<div class='card-header'>
+<h6>Reliable for drivers</h6>
+</div>
+<div class='card-body'>
+<p class='card-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+<ul>
+<li>
+<p class='card-text'>Lorem Ipsum is simply dummy text of the printing</p>
+</li>
+<li>
+<p class='card-text'>and typesetting industry. Lorem Ipsum has been</p>
+</li>
+<li>
+<p class='card-text'>the industry's standard dummy text ever since the</p>
+</li>
+<li>
+<p class='card-text'>1500s, when an unknown printer took a galley of</p>
+</li>
+<li>
+<p class='card-text'>type and scrambled it to make a type specimen book.</p>
+</li>
+<li>
+<p class='card-text'>It has survived not only five centuries, but also the leap</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ===================section_12_end=========================== -->
+<!-- ===================section_13=============================== -->
+<div class='home__payment__options'>
+<div class='container'>
+<div class='row'>
+<div class='col-md-6'>
+<h5 class='pt-4 page-section-title mb-0'>Payment options</h5>
+<div class='row align-items-center mb-3'>
+<div class='col-3 col-sm-3 col-md-3'>
+<img alt='' class='second-last' src='images/visa.jpg'>
+</div>
+<div class='col-3 col-sm-3 col-md-3'>
+<img alt='' class='second-last' src='images/master.jpg'>
+</div>
+<div class='col-3 col-sm-3 col-md-3'>
+<img alt='' class='second-last paypal' src='images/paypal.png' style="height: 120px;">
+</div>
+<div class='col-3 col-sm-3 col-md-3'>
+<img alt='' class='second-last interac' src='images/interac.png'>
+</div>
+<p class='f-500 pl-3'>Online payments are secure and paid only after the ride is complete</p>
+</div>
+</div>
+<div class='col-md-4 row-vertical-line ml-2'><center>
+<h5 class='pt-4 page-section-title mb-4'>Reviews</h5>
+<img alt='' class='review second-last mb-4' src='images/72-reviews.png'>
+<p class='f-500'>Review rides, drivers, and fellow passengers</p>
+    </center>
+</div>
+</div>
+</div>
+</div>
+<!-- ===================section_13_end=========================== -->
+<!-- ===================footer=============================== -->
+
+</div>
+<div class='footer__content'>
+<!-- Footer -->
+<footer class='page-footer font-small mdb-color pt-4'>
+<!-- Footer Links -->
+<div class='container text-center text-md-left'>
+<!-- Footer links -->
+<div class='row text-center text-md-left mt-3 pb-3'>
+<!-- Grid column -->
+<div class='col-md-3 col-lg-3 col-xl-3 mx-auto mt-3'>
+<h6 class='text-uppercase mb-4 font-weight-bold'>
+<img src="images/logo/footer-logo.png" alt="Footer logo" />
+</h6>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+<!-- / Store information -->
+<ul class='footer__store ul__list d-none'>
+<li>
+<a href='#'>
+<img src="/images/store/google-play.png" alt="Google play" />
+</a>
+</li>
+<li>
+<a href='#'>
+<img src="/images/store/app-store.png" alt="App store" />
+</a>
+</li>
+</ul>
+<!-- / End store information -->
+</div>
+<!-- Grid column -->
+<hr class='w-100 clearfix d-md-none'>
+<!-- Grid column -->
+<div class='col-md-2 col-lg-2 col-xl-2 mx-auto mt-3'>
+    <p><a class='footer-text' href='#!'>Sign up</a></p>
+<p>
+<a class='footer-text' href='#!'>Log in</a>
+</p>
+<p>
+<a class='footer-text' href='#!'>Post a ride</a>
+</p>
+<p>
+<a class='footer-text' href='#!'>Find a ride</a>
+</p>
+</div>
+<!-- Grid column -->
+<hr class='w-100 clearfix d-md-none'>
+<!-- Grid column -->
+<div class='col-md-3 col-lg-2 col-xl-2 mx-auto mt-3'>
+    <p><a class='footer-text' href='#!'>How it works</a></p>
+<p>
+<a class='footer-text' href='#!'>For drivers</a>
+</p>
+<p>
+<a class='footer-text' href='#!'>For passengers</a>
+</p>
+<p>
+<a class='footer-text' href='#!'>Help</a>
+</p>
+</div>
+<!-- Grid column -->
+<hr class='w-100 clearfix d-md-none'>
+<!-- Grid column -->
+<div class='col-md-2 col-lg-2 col-xl-2 mx-auto mt-3'>
+    <p><a class='footer-text' href='#!'>Students</a></p>
+<p>
+<a class='footer-text' href='#!'>Contact us / Support</a>
+</p>
+<p>
+<a class='footer-text' href='#!'>FAQ</a>
+</p>
+<p>
+<a class='footer-text' href='#!'>Partners</a>
+</p>
+</div>
+<!-- Grid column -->
+<!-- Grid column -->
+<div class='col-md-2 col-lg-2 col-xl-2 mx-auto mt-3'>
+    <p><a class='footer-text' href='#!'>Terms of services</a></p>
+<p>
+<a class='footer-text' href='#!'>Privacy policy</a>
+</p>
+<p>
+<a class='footer-text' href='#!'>Media</a>
+</p>
+</div>
+<!-- Grid column -->
+</div>
+<!-- Footer links -->
+<hr>
+<!-- Grid row -->
+<div class='row d-flex align-items-center'>
+<!-- Grid column -->
+<div class='col-md-7 col-lg-8'>
+<!-- Copyright -->
+<p class='text-center text-md-left'>© 2022 Ridesforshare. All rights reserved.</p>
+</div>
+<!-- Grid column -->
+<!-- Grid column -->
+<div class='col-md-5 col-lg-4 ml-lg-0'>
+<!-- Social buttons -->
+<div class='text-center text-md-right'>
+<ul class='list-unstyled list-inline footer-social-media'>
+<li class='list-inline-item'>
+<a class='btn-floating btn-sm rgba-white-slight mx-1'>
+<i aria-hidden='true' class='fa fa-facebook'></i>
+</a>
+</li>
+<li class='list-inline-item'>
+<a class='btn-floating btn-sm rgba-white-slight mx-1'>
+<i aria-hidden='true' class='fa fa-instagram'></i>
+</a>
+</li>
+<li class='list-inline-item'>
+<a class='btn-floating btn-sm rgba-white-slight mx-1'>
+<i aria-hidden='true' class='fa fa-youtube-play'></i>
+</a>
+</li>
+<li class='list-inline-item'>
+<a class='btn-floating btn-sm rgba-white-slight mx-1'>
+<i aria-hidden='true' class='fa fa-twitter'></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<!-- Grid column -->
+</div>
+<!-- Grid row -->
+</div>
+<!-- Footer Links -->
+</footer>
+<!-- Footer -->
+<!-- ===================footer_end=========================== -->
+<!-- popup -->
+<!-- popup -->
+<!-- =====================banner_end===================== -->
+<script src='https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js' type='text/javascript'></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.12/dist/js/bootstrap-select.min.js"></script>
+<script src="javascripts/libs/bootstrap-select-country.min.js"></script>
+<script src="javascripts/site.js"></script>
+<script>
+  $(document).ready(function(){
+  
+    $('#datepicker').datepicker({
+      uiLibrary: 'bootstrap4'
+    });
+  
+  
+    // $(".countrypicker").selectpicker();
+    // $('.countrypicker').countrypicker({
+    //     flag: true
+    //   });
+  })
+</script>
+<!-- calander_end -->
+
+</div>
+<!-- / Google MAP APIS -->
+
+</div>
+</body>
+</html>

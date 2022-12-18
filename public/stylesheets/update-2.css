@@ -1,0 +1,354 @@
+.profile__image--84 {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative; }
+
+.profile__upload__options {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  display: -webkit-inline-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease 0.03s;
+  transition: all 0.3s ease 0.03s; }
+  .profile__upload__options:hover {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.8);
+    -webkit-transition: all 0.3s ease 0.03s;
+    transition: all 0.3s ease 0.03s; }
+  .profile__upload__options .upload__text {
+    font-size: 12px; }
+
+.location__icon.w-24 {
+  width: 14px; }
+
+.location__icon__field {
+  background: #fff; }
+  .location__icon__field .form-control {
+    border-left: none;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+    .location__icon__field .form-control:hover, .location__icon__field .form-control:active, .location__icon__field .form-control:focus {
+      -webkit-box-shadow: none;
+              box-shadow: none; }
+  .location__icon__field .input-group-prepend .input-group-text {
+    background: #fff; }
+
+.gj-datepicker.gj-datepicker-bootstrap .input-group-append .btn.btn-outline-secondary:active, .gj-datepicker.gj-datepicker-bootstrap .input-group-append .btn.btn-outline-secondary:focus, .gj-datepicker.gj-datepicker-bootstrap .input-group-append .btn.btn-outline-secondary:active:focus {
+  color: #fff !important; }
+
+.ride__view__map .info__wrapper__content .media {
+  margin-bottom: 10px;
+  align-items: center; }
+
+.ride__view__map .info__wrapper__content .media-left {
+  margin-right: 5px;
+  color: #5ea005; }
+  .ride__view__map .info__wrapper__content .media-left span {
+    font-size: 21px; }
+
+.ride__view__map .info__wrapper__content .media-body {
+  font-size: 14px; }
+  .ride__view__map .info__wrapper__content .media-body .media-title {
+    font-size: 16px;
+    margin-bottom: 0; }
+
+.ride__view__map .info__wrapper__content .media-distance .media-title {
+  font-size: 14px;
+  font-weight: normal; }
+
+/**
+ *  Animation to show/hide calendar
+ */
+@keyframes showDatePicker {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8); }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@keyframes hideDatePicker {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    display: block !important; }
+  50% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6); }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    display: none !important; } }
+
+/* Webkit keyframe */
+@-webkit-keyframes showDatePicker {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    display: block !important; }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    display: none !important; } }
+
+@-webkit-keyframes hideDatePicker {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    display: block !important; }
+  50% {
+    -webkit-transform: scale(0.6); }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    display: none !important; } }
+
+.gj-picker.gj-picker-bootstrap.datepicker.date-picker-opened {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+  -webkit-animation: showDatePicker .4s ease 0s;
+  animation: showDatePicker .4s ease 0s; }
+
+.gj-picker.gj-picker-bootstrap.datepicker:not(.date-picker-opened) {
+  -webkit-animation: hideDatePicker .2s ease 0s;
+  animation: hideDatePicker .2s ease 0s;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+  display: block !important; }
+
+.gj-datepicker.gj-datepicker-bootstrap .input-group-append button.btn.btn-outline-secondary:hover, .gj-datepicker.gj-datepicker-bootstrap .input-group-append button.btn.btn-outline-secondary:active, .gj-datepicker.gj-datepicker-bootstrap .input-group-append button.btn.btn-outline-secondary:focus, .gj-datepicker.gj-datepicker-bootstrap .input-group-append button.btn.btn-outline-secondary:focus:active {
+  color: #6c757d !important;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.home-ride-date-picker .gj-datepicker.gj-datepicker-bootstrap .input-group-append button.btn.btn-outline-secondary:hover, .home-ride-date-picker .gj-datepicker.gj-datepicker-bootstrap .input-group-append button.btn.btn-outline-secondary:active, .home-ride-date-picker .gj-datepicker.gj-datepicker-bootstrap .input-group-append button.btn.btn-outline-secondary:focus, .home-ride-date-picker .gj-datepicker.gj-datepicker-bootstrap .input-group-append button.btn.btn-outline-secondary:focus:active {
+  color: #6c757d !important;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: transparent;
+  border-color: #ced4da; }
+
+.ride__driver .image__image picture, .ride__driver .image__image img {
+  width: 42px;
+  height: 42px;
+  -o-object-fit: cover;
+     object-fit: cover; }
+
+.ride__others .car__image img {
+  width: 60px;
+  height: 60px;
+  -o-object-fit: cover;
+     object-fit: cover; }
+
+.search__result__list .search__result__item .search__result__info .grid__item {
+  width: 100%; }
+
+.search__result__list .search__result__item .search__result__places .grid__item {
+  width: 100%; }
+
+.search__result__list .search__result__item .search__result__other .grid__item {
+  width: 100%; }
+  .search__result__list .search__result__item .search__result__other .grid__item .restricted__item {
+    text-align: center;
+    justify-content: center; }
+
+.search__result__list .search__result__item .search__result__driver .ride__driver .image__image picture, .search__result__list .search__result__item .search__result__driver .ride__driver .image__image img {
+  width: 60px !important;
+  height: 60px !important;
+  max-width: none !important; }
+
+@media all and (min-width: 768px) {
+  .search__result__list .search__result__item .search__result__places .grid__item {
+    width: 100%; }
+  .search__result__list .search__result__item .search__result__places .location__from {
+    flex-basis: calc(50%);
+    max-width: calc(50%); }
+  .search__result__list .search__result__item .search__result__places .location__to {
+    flex-basis: calc(50%);
+    max-width: calc(50%); }
+  .search__result__list .search__result__item .search__result__other .ride__others .car__image {
+    margin-bottom: 10px; } }
+
+@media all and (min-width: 1200px) and (max-width: 1439px) {
+  .search__result__list .search__result__item .search__result__driver {
+    flex-basis: 18.6%;
+    max-width: 18.6%; }
+    .search__result__list .search__result__item .search__result__driver .ride__driver {
+      justify-content: center;
+      text-align: center; }
+      .search__result__list .search__result__item .search__result__driver .ride__driver .image__image {
+        text-align: center;
+        margin-bottom: 10px; }
+      .search__result__list .search__result__item .search__result__driver .ride__driver .image__content .profile__content {
+        text-align: center !important; } }
+
+@media all and (min-width: 1320px) {
+  .search__result__list .search__result__item .search__result__info {
+    flex-basis: 14%;
+    max-width: 14%; }
+  .search__result__list .search__result__item .search__result__places {
+    flex-basis: calc(100% - 67.1%);
+    max-width: calc(100% - 67.1%); }
+  .search__result__list .search__result__item .search__result__seats {
+    flex-basis: 20%;
+    max-width: 20%; }
+  .search__result__list .search__result__item .search__result__driver {
+    flex-basis: 18.6%;
+    max-width: 18.6%; }
+  .search__result__list .search__result__item .search__result__other {
+    flex-basis: 14.5%;
+    max-width: 14.5%; } }
+
+@media all and (min-width: 1200px) and (max-width: 1319px) {
+  .search__result__list .search__result__item .search__result__info {
+    flex-basis: 14.6%;
+    max-width: 14.6%; }
+  .search__result__list .search__result__item .search__result__places {
+    flex-basis: calc(100% - 68.2%);
+    max-width: calc(100% - 68.2%); }
+  .search__result__list .search__result__item .search__result__seats {
+    flex-basis: 21%;
+    max-width: 21%; }
+  .search__result__list .search__result__item .search__result__other {
+    flex-basis: 13.5%;
+    max-width: 13.5%; } }
+
+@media all and (min-width: 768px) and (max-width: 1199px) {
+  .search__result__list .search__result__item .search__result__info {
+    flex-basis: 180px;
+    max-width: 180px;
+    justify-content: center; }
+  .search__result__list .search__result__item .search__result__places {
+    flex-basis: calc(100% - 180px);
+    max-width: calc(100% - 180px); }
+  .search__result__list .search__result__item .search__result__seats {
+    flex-basis: 180px;
+    max-width: 180px; }
+  .search__result__list .search__result__item .search__result__driver, .search__result__list .search__result__item .search__result__other {
+    flex-basis: calc((100% - 180px)/2);
+    max-width: calc((100% - 180px)/2); }
+  .search__result__list .search__result__item .search__result .search__result__places .location__row .location__from {
+    text-align: right; }
+  .search__result__list .search__result__item .search__result .search__result__places .location__row .location__direction {
+    right: calc(50% - 5px); } }
+
+@media all and (min-width: 576px) and (max-width: 767px) {
+  .search__result__list .search__result__item .search__result__other .ride__others .car__image {
+    flex-basis: 70px;
+    max-width: 70px; }
+  .search__result__list .search__result__item .search__result__other .ride__others .car__restricted {
+    flex-basis: calc(100% - 70px);
+    max-width: calc(100% - 70px); } }
+
+@media all and (min-width: 480px) and (max-width: 767px) {
+  .search__result__list .search__result__item .search__result__info {
+    flex-basis: 160px;
+    max-width: 160px; }
+  .search__result__list .search__result__item .search__result__places {
+    flex-direction: row;
+    flex-basis: calc(100% - 160px);
+    max-width: calc(100% - 160px); }
+    .search__result__list .search__result__item .search__result__places .location__row {
+      flex-direction: row; }
+    .search__result__list .search__result__item .search__result__places .location__direction {
+      position: absolute;
+      -webkit-transform: rotate(270deg);
+              transform: rotate(270deg);
+      left: calc(50% - 15px);
+      top: calc(50% - 15px); }
+    .search__result__list .search__result__item .search__result__places .location__from {
+      padding-right: 10px; }
+    .search__result__list .search__result__item .search__result__places .location__to {
+      padding-left: 10px; }
+    .search__result__list .search__result__item .search__result__places .location__from,
+    .search__result__list .search__result__item .search__result__places .location__to {
+      flex-basis: 50%;
+      max-width: 50%; } }
+
+@media all and (min-width: 768px) and (max-width: 1199px) {
+  .search__result__list .search__result .grid:not(:last-child) {
+    border-right: 1px solid #dce4ee; }
+  .search__result__list .search__result .grid:nth-child(2) {
+    border-right: none; }
+  .search__result__list .search__result__driver {
+    justify-content: center; }
+  .search__result__list .search__result .grid:first-child,
+  .search__result__list .search__result .grid:nth-child(2),
+  .search__result__list .search__result .grid:nth-child(3) {
+    border-bottom: 1px solid #dce4ee; }
+  .search__result__list .search__result__driver .ride__driver {
+    align-content: center; }
+  .search__result__list .search__result__driver .image__image {
+    display: flex;
+    align-content: center; }
+  .search__result__list .search__result__driver .image__content {
+    padding-left: 15px;
+    justify-content: flex-start;
+    text-align: left; }
+    .search__result__list .search__result__driver .image__content .profile__content {
+      text-align: left !important; }
+  .search__result__list .search__result__places .location__grid:first-child {
+    padding-right: 20px; }
+  .search__result__list .search__result__places .location__grid:last-child {
+    padding-left: 20px; }
+  .search__result__list .search__result__other .grid__item {
+    width: 100%; }
+  .search__result__list .search__result__other .car__restricted .restricted__item {
+    justify-content: center; }
+    .search__result__list .search__result__other .car__restricted .restricted__item li img {
+      width: 24px; } }
+
+@media all and (min-width: 576px) and (max-width: 767px) {
+  .search__result__list .search__result .grid:not(:last-child) {
+    border-right: 1px solid #dce4ee; }
+  .search__result__list .search__result .grid:first-child,
+  .search__result__list .search__result .grid:nth-child(2) {
+    border-bottom: 1px solid #dce4ee; }
+  .search__result__list .search__result .grid:nth-child(3) {
+    border-bottom: 1px solid #dce4ee; } }
+
+@media all and (max-width: 575px) {
+  .search__result__list .grid {
+    border-bottom: 1px solid #dce4ee; }
+  .search__result__list .search__result__other .ride__others {
+    flex-direction: column; }
+    .search__result__list .search__result__other .ride__others .car__image,
+    .search__result__list .search__result__other .ride__others .car__restricted {
+      flex-basis: 100%;
+      max-width: 100%; }
+  .search__result__list .ride__driver .profile__rating__wrapper {
+    justify-content: flex-start !important; } }
+
+@media all and (min-width: 420px) and (max-width: 576px) {
+  .search__result__list .search__result__places {
+    flex-basis: calc(100% - 140px);
+    max-width: calc(100% - 140px); }
+  .search__result__list .search__result__info {
+    border-right: 1px solid #dce4ee;
+    flex-basis: 140px !important;
+    max-width: 140px !important; }
+  .search__result__list .search__result__driver, .search__result__list .search__result__other {
+    flex-basis: 100%;
+    max-width: 100%;
+    justify-content: center; } }

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+<meta charset='utf-8'>
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<title>
+RideSharing
+</title>
+<link crossorigin='anonymous' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css' rel='stylesheet'>
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+<link href="stylesheets/site.css" rel="stylesheet" />
+<link href='css/all.min.css' rel='stylesheet' type='text/css'>
+<link href='css/fonts.css' rel='stylesheet' type='text/css'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Rubik:300,400,500,600%7CIBM+Plex+Sans:300,400,500,600,700' rel='stylesheet'>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.12/dist/css/bootstrap-select.min.css" rel="stylesheet" />
+<link href="https://unpkg.com/bootstrap-select-country@4.1.0/dist/css/bootstrap-select-country.min.css" rel="stylesheet" />
+<!-- <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
+<script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- calaner -->
+<link href='https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css' rel='stylesheet' type='text/css'>
+<!-- calander -->
+    
+    <style>
+        @font-face {
+  font-family: myFirstFont;
+  src: url(fonts/Futura.ttf);
+}
+        
+        h3, h5{
+            font-family: Futura;
+        }
+        .home__search__banner .inputWithIcon .form-field-img {
+    top: 12px;
+    width: 28px;
+        }
+        
+        .home__search__banner .input-group.gj-datepicker-bootstrap .input-group-append button .gj-icon {
+    top: 13px;
+}
+        
+        .form-date-picker-wrapper .close-date-btn {
+            top: 12px;
+        }
+        
+        .landing-search-icon.btn.wrn-btn{
+            padding-top: 10px;
+        }
+        
+        .home__header__main .navbar-nav.header-left-side .nav-item{
+            margin-right: 15px;
+        }
+        
+        input[type="text"]{
+            border-radius: 10px;
+        }
+        
+        @media only screen and (min-width:1400px) {
+            .home__banner__box .carousel-item {
+            height: 550px;
+            min-height: 550px;
+        }
+            
+            .landing-search-icon.btn.wrn-btn{
+            padding-top: 10px;
+                padding-bottom: 10px;
+        }
+        }
+        
+        @media only screen and (max-width:1300px){
+            .home__banner__box .carousel-item {
+            height: 440px;
+            min-height: 440px;
+        }
+        }
+        
+        @media only screen and (min-width:1200px) {
+            
+                div.card__ride div.list-group .media-body p.font-weight-bold{
+                    padding-top:.5rem;
+                }
+            
+            .landing-search-icon.btn.wrn-btn{
+            padding-top: 9.7px;
+                padding-bottom: 9.64px;
+        }
+        }
+        
+        @media only screen and (min-width:768px) {
+        .wrn-btn.wrn-btn-r-radius {
+    border-top-right-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+        }
+        }
+        
+        @media (max-width: 1000px) {
+            
+            .landing-search-icon.btn.wrn-btn{
+            padding-top: 9.8px;
+                padding-bottom: 9.8px;
+        }
+        }
+        
+        @media (max-width: 990px) and (min-width: 762px) {
+            .home__banner__box .carousel-item {
+            height: 350px;
+            min-height: 350px;
+        }
+            
+            .landing-search-icon.btn.wrn-btn{
+            padding-top: 9.6px;
+                padding-bottom: 9.6px;
+        }
+        }
+        
+        @media (max-width: 991px) {
+.nav-link-highlight .highlight {
+    top: 13px;
+    right: auto;
+    left: 64px;
+        }
+        
+        @media all and (max-width: 768px) {
+      .home__search__banner .search__section__submit {
+        flex-basis: 100%;
+        max-width: 100%; } }
+  .home__search__banner .search__section__toggle {
+    flex-basis: 40px;
+    max-width: 40px; }
+    .home__search__banner .search__section__toggle .btn-toggle {
+      background: #f0f0f0;
+      border-radius: 0;
+      font-size: 0.77em;
+      width: 100%;
+      border-top: 1px solid #aaa;
+      border-bottom: 1px solid #aaa; }
+    @media all and (max-width: 768px) {
+      .home__search__banner .search__section__toggle {
+        flex-basis: 100%;
+        max-width: 100%; }
+        .home__search__banner .search__section__toggle .btn-toggle {
+          border-bottom: none !important;
+          border-left-color: #aaa;
+          border-right-color: #aaa; } }
+  .home__search__banner .search__section__to, .home__search__banner .search__section__from, .home__search__banner .search__section__date {
+    flex-basis: calc((100% - 90px)/3);
+    max-width: calc((100% - 90px)/3); }
+    @media all and (max-width: 768px) {
+      .home__search__banner .search__section__to, .home__search__banner .search__section__from, .home__search__banner .search__section__date {
+        flex-basis: 100%;
+        max-width: 100%; } }
+            
+            @media all and (max-width: 459px) {
+      .even__more__list li {
+        flex-basis: 50%;
+        max-width: 50%; } }
+    </style>
+</head>
+<body>
+<div class='body__wrapper'>
+<div class='header__content'>
+<!-- =====================Navbar=========================== -->
+<div class='home__header__main'>
+<div class='container-fluid'>
+<nav class='navbar navbar-expand-lg navbar-light bg-light navbar-custom-header'>
+<a class='navbar-brand' href='#'>
+<img src="images/logo/main-logo.png" alt="Main logo" />
+</a>
+<button aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation' class='navbar-toggler' data-target='#navbarSupportedContent' data-toggle='collapse' type='button'>
+<span class='navbar-toggler-icon'></span>
+</button>
+<div class='collapse navbar-collapse' id='navbarSupportedContent'>
+<ul class='navbar-nav mr-auto header-left-side'>
+<li class='nav-item'>
+<a class='nav-link nav-link-highlight' href='#'>
+<span class='highlight' style="border-radius: 2px;">New</span>
+<span class='text'>Students</span>
+</a>
+</li>
+<li class='nav-item'>
+<a class='nav-link' href='#'><img alt='' class='mr-2' height='16' src='images/plus.png' width='16'><span class='text'>Post a ride</span>
+</a>
+</li>
+<li class='nav-item'>
+<a class='nav-link' href='#'><i aria-hidden='true' class='fa fa-search pr-2' style="font-weight: normal; font-size:15px;"></i><span class='text'>Find a ride</span>
+</a>
+</li>
+</ul>
+<form class='form-inline my-2 my-lg- nav-right-section'>
+<a class='nav-link login_text nav-login-btn' href='#'><i aria-hidden='true' class='fa fa-user-o pr-2'></i>Log in / Sign up
+</a>
+<select class='nav-link login_text nav-login-btn form-control form-country-selector' style="padding-top: 0.4em; height: 37.5px;">
+    <option>English</option>
+    </select>
+</form>
+</div>
+</nav>
+</div>
+</div>
+<!-- =====================Navbar_end======================= -->
+
+</div>

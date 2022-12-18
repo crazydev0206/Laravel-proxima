@@ -1,0 +1,37 @@
+.ul__list__card.li-p-125 li a {
+  padding: .5rem 1.25rem;
+  font-size: 16px; }
+
+.profile-s-menu li:not(:last-child) {
+  border-bottom: 1px solid #eee; }
+
+.profile-s-menu li a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  cursor: pointer; }
+  .profile-s-menu li a:hover, .profile-s-menu li a.active {
+    background: #1fb9f6;
+    color: #fff; }
+
+hr.double {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  height: 3px; }
+
+.f-20 {
+  font-size: 20px; }
+
+.img-circle,
+.img-round {
+  border-radius: 50%; }
+
+@media all and (min-width: 992px) {
+  .profile__extra__sidebar {
+    display: block !important; } }
+
+.profile__extra__toggle {
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+  .profile__extra__toggle:hover, .profile__extra__toggle:active, .profile__extra__toggle:focus, .profile__extra__toggle:active:focus {
+    -webkit-box-shadow: none;
+            box-shadow: none; }

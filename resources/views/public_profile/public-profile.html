@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+<meta charset='utf-8'>
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<title>
+Public Profile || RideSharing
+</title>
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+<link href="stylesheets/site.css" rel="stylesheet" />
+<link href='css/all.min.css' rel='stylesheet' type='text/css'>
+<link href='css/fonts.css' rel='stylesheet' type='text/css'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Rubik:300,400,500,600%7CIBM+Plex+Sans:300,400,500,600,700' rel='stylesheet'>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.12/dist/css/bootstrap-select.min.css" rel="stylesheet" />
+<link href="https://unpkg.com/bootstrap-select-country@4.1.0/dist/css/bootstrap-select-country.min.css" rel="stylesheet" />
+<link href="stylesheets/update.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css" rel="stylesheet" type="text/css" />
+
+<!-- <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
+<script src="javascripts/libs/jquery.3.3.1.min.js" type="text/javascript"></script>
+<script src="javascripts/libs/jquery-migrate-3.0.0.js" type="text/javascript"></script>
+<script>
+    // $(document).on('pagebeforecreate', function( e ) {
+    //   $( "input, textarea, select", e.target ).attr( "data-role", "none" );
+    // });
+    // $(document).on('pagebeforecreate',function(){
+    //  $.mobile.page.prototype.options.keepNative = "select,input,textarea";
+    // });
+</script>
+<script src="javascripts/libs/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+<script src="javascripts/libs/popper.min.js"></script>
+<script src="javascripts/libs/bootstrap.4.4.1.min.js"></script>
+<!-- calaner -->
+<link href='//unpkg.com/gijgo@1.9.13/css/gijgo.min.css' rel='stylesheet' type='text/css'>
+<!-- calander -->
+</head>
+<body>
+<div class='body__wrapper'>
+<div class='header__content'>
+<!-- =====================Navbar=========================== -->
+<div class='home__header__main'>
+<div class='container-fluid'>
+<nav class='navbar navbar-expand-lg navbar-light bg-light navbar-custom-header'>
+<a class='navbar-brand' href='/'>
+<img src="/images/logo/main-logo.png" alt="Main logo" />
+</a>
+<button aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation' class='navbar-toggler' data-target='#navbarSupportedContent' data-toggle='collapse' type='button'>
+<span class='navbar-toggler-icon'></span>
+</button>
+<div class='collapse navbar-collapse' id='navbarSupportedContent'>
+<ul class='navbar-nav mr-auto header-left-side h-mobile-center-menu'>
+<li class='nav-item'>
+<a class='nav-link nav-link-highlight' href='#'>
+<span class='highlight'>New</span>
+<span class='text'>Student</span>
+</a>
+</li>
+<li class='nav-item'>
+<a class='nav-link' href='/post-ride.html'><img alt='' class='mr-2' height='16' src='images/plus.png' width='16'><span class='text'>Post a ride</span>
+</a>
+</li>
+<li class='nav-item'>
+<a class='nav-link' href='/search.html'><i aria-hidden='true' class='fa fa-search pr-2'></i><span class='text'>Find a ride</span>
+</a>
+</li>
+</ul>
+<ul class='navbar-nav ml-auto mr-0 header-right-side h-mobile-center-menu'>
+<li class='nav-item'>
+<a class='nav-link login_text nav-login-btn' href='#'><i aria-hidden='true' class='fa fa-user-o pr-2'></i>Log in/Sign Up
+</a>
+</li>
+</ul>
+
+<form class='form-inline my-2 my-lg- nav-right-section h-mobile-center-form'>
+<select class='form-control countrypicker form-country-selector' data-class='selectpicker' data-flag='false'></select>
+</form>
+</div>
+</nav>
+</div>
+</div>
+<!-- =====================Navbar_end======================= -->
+
+</div>
+<div class='body__content'>
+<div class='profile__page page__common p-60 with-b-top'>
+<div class='container'>
+<div class='row'>
+<div class='col-12'>
+<div class='page__content__body'>
+<div class='row'>
+<div class='col-12 col-md-4 col-lg-3'>
+<div class='profile__sidebar'>
+<div class='card card__profile mb-4'>
+<div class='card__body card-body'>
+<div class='card__body__content text-center'>
+<div class='image__outer mb-3'>
+<picture>
+<source srcset='/images/icons-png/user-simple.png'>
+<img src="/images/icons-png/user-simple.png" class="img-circle" alt="User simple" />
+</picture>
+</div>
+<div class='profile__info'>
+<h5 class='text-center'>John Doe</h5>
+<p class='text-center'>
+<span class='text-grey-1 mr-1'>DOB</span>
+<b>32</b>
+</p>
+<p class='text-center text-grey-1'>
+Member since
+<b>March</b>
+<b>2018</b>
+</p>
+</div>
+<hr class='double'>
+<div class='verification__list'>
+<ul class='ul__list'>
+<li>
+<div class='media align-items-center'>
+<div class='media-left'>
+<span class='f-20 text-success'>
+<span class='fa fa-check'></span>
+</span>
+</div>
+<div class='media-body text-left pl-2'>
+Driver's license verified
+</div>
+</div>
+</li>
+<li>
+<div class='media align-items-center'>
+<div class='media-left'>
+<span class='f-20 text-success'>
+<span class='fa fa-check'></span>
+</span>
+</div>
+<div class='media-body text-left pl-2'>
+Phone number verified
+</div>
+</div>
+</li>
+<li>
+<div class='media align-items-center'>
+<div class='media-left'>
+<span class='f-20 text-success'>
+<span class='fa fa-check'></span>
+</span>
+</div>
+<div class='media-body text-left pl-2'>
+Email verified
+</div>
+</div>
+</li>
+<li>
+<div class='media align-items-center'>
+<div class='media-left'>
+<span class='f-20 text-success'>
+<span class='fa fa-check'></span>
+</span>
+</div>
+<div class='media-body text-left pl-2'>
+Linkedin profile conncted
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class='driver__info'>
+<div class='card card__profile mb-4'>
+<div class='card__body card-body'>
+<div class='card__body__content text-center'>
+<ul class='ul__list'>
+<li>
+<p class='mb-0'>
+Rides done as a driver:
+<b>33</b>
+</p>
+</li>
+<li>
+<p class='mb-0'>
+Rides done as a passenger:
+<b>8</b>
+</p>
+</li>
+<li>
+<p class='mb-0'>
+Passengers driven:
+<b>354</b>
+</p>
+</li>
+<li>
+<p class='mb-0'>
+Kilometers shared:
+<b>34000</b>
+</p>
+</li>
+</ul>
+</div>
+<hr class='double'>
+<div class='sidebar__car'>
+<div class='row'>
+<div class='col-12'>
+<div class='img-thumbnail-wrapper'>
+<img src="/images/cars/bentley-continental-gt-red-wallpaper.jpg" class="img-thumbnail img-fluid" alt="Bentley continental gt red wallpaper" />
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='col-12 col-md-8 col-lg-9'>
+<div class='public__bio'>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices dolor magna, eu tempus nisl ultricies ut. Praesent sed bibendum leo. Aenean blandit mi nec consectetur pulvinar.
+</p>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices dolor magna, eu tempus nisl ultricies ut. Praesent sed bibendum leo. Aenean blandit mi nec consectetur pulvinar.
+</p>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices dolor magna, eu tempus nisl ultricies ut. Praesent sed bibendum leo. Aenean blandit mi nec consectetur pulvinar.
+</p>
+</div>
+<hr class='double'>
+<div class='public__rating'>
+<div class='row'>
+<div class='col-12 col-md-6'>
+<h6>
+Average rating:
+<b>95%</b>
+</h6>
+<h6>
+Reviewed by
+<b>18</b>
+members
+</h6>
+</div>
+<div class='col-12 col-md-6'>
+<ul class='ul__list'>
+<li>
+<div class='d-flex'>
+<div class='r-rateing mr-1'>
+<div class='profile-rating' data-background='transparent' data-rating='4.2' data-readonly='true' data-size='24px'></div>
+</div>
+<div class='r-text'>
+<span>
+Timeliness
+</span>
+</div>
+</div>
+</li>
+<li>
+<div class='d-flex'>
+<div class='r-rateing mr-1'>
+<div class='profile-rating' data-background='transparent' data-rating='2' data-readonly='true' data-size='24px'></div>
+</div>
+<div class='r-text'>
+<span>
+Condition of the vehicle
+</span>
+</div>
+</div>
+</li>
+<li>
+<div class='d-flex'>
+<div class='r-rateing mr-1'>
+<div class='profile-rating' data-background='transparent' data-rating='5' data-readonly='true' data-size='24px'></div>
+</div>
+<div class='r-text'>
+<span>
+Safety
+</span>
+</div>
+</div>
+</li>
+<li>
+<div class='d-flex'>
+<div class='r-rateing mr-1'>
+<div class='profile-rating' data-background='transparent' data-rating='4.8' data-readonly='true' data-size='24px'></div>
+</div>
+<div class='r-text'>
+<span>
+Conscious of passengers
+</span>
+</div>
+</div>
+</li>
+<li>
+<div class='d-flex'>
+<div class='r-rateing mr-1'>
+<div class='profile-rating' data-background='transparent' data-rating='3' data-readonly='true' data-size='24px'></div>
+</div>
+<div class='r-text'>
+<span>
+Comfort
+</span>
+</div>
+</div>
+</li>
+<li>
+<div class='d-flex'>
+<div class='r-rateing mr-1'>
+<div class='profile-rating' data-background='transparent' data-rating='5' data-readonly='true' data-size='24px'></div>
+</div>
+<div class='r-text'>
+<span>
+Driver
+</span>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- / Public review -->
+<div class='public__review__wrapper'>
+<hr>
+<div class='profile__reviews__wrapper'>
+<h4 class='section-title mt-2 mb-4'>Reviews</h4>
+<div class='profile__reviews mb-5'>
+<div class='profile__review'>
+<div class='media mb-4'>
+<div class='media-left mr-3'>
+<div class='image__rounded'>
+<img src="/images/icons-png/user-simple.png" class="img-fluid img-round" alt="User simple" />
+</div>
+</div>
+<div class='media-body'>
+<h6 class='r-title'>John Doe</h6>
+<p class='r-desc'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dui magna, ultrices sed malesuada quis, hendrerit quis velit. Maecenas pellentesque facilisis fermentum.</p>
+</div>
+</div>
+</div>
+<div class='profile__review'>
+<div class='media mb-4'>
+<div class='media-left mr-3'>
+<div class='image__rounded'>
+<img src="/images/icons-png/user-simple.png" class="img-fluid img-round" alt="User simple" />
+</div>
+</div>
+<div class='media-body'>
+<h6 class='r-title'>John Doe</h6>
+<p class='r-desc'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dui magna, ultrices sed malesuada quis, hendrerit quis velit. Maecenas pellentesque facilisis fermentum.</p>
+</div>
+</div>
+</div>
+<div class='profile__review'>
+<div class='media mb-4'>
+<div class='media-left mr-3'>
+<div class='image__rounded'>
+<img src="/images/icons-png/user-simple.png" class="img-fluid img-round" alt="User simple" />
+</div>
+</div>
+<div class='media-body'>
+<h6 class='r-title'>John Doe</h6>
+<p class='r-desc'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dui magna, ultrices sed malesuada quis, hendrerit quis velit. Maecenas pellentesque facilisis fermentum.</p>
+</div>
+</div>
+</div>
+<div class='profile__review'>
+<div class='media mb-4'>
+<div class='media-left mr-3'>
+<div class='image__rounded'>
+<img src="/images/icons-png/user-simple.png" class="img-fluid img-round" alt="User simple" />
+</div>
+</div>
+<div class='media-body'>
+<h6 class='r-title'>John Doe</h6>
+<p class='r-desc'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dui magna, ultrices sed malesuada quis, hendrerit quis velit. Maecenas pellentesque facilisis fermentum.</p>
+</div>
+</div>
+</div>
+<div class='profile__review'>
+<div class='media mb-4'>
+<div class='media-left mr-3'>
+<div class='image__rounded'>
+<img src="/images/icons-png/user-simple.png" class="img-fluid img-round" alt="User simple" />
+</div>
+</div>
+<div class='media-body'>
+<h6 class='r-title'>John Doe</h6>
+<p class='r-desc'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dui magna, ultrices sed malesuada quis, hendrerit quis velit. Maecenas pellentesque facilisis fermentum.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class='row'>
+<div class='col-12'>
+<p class='text-left mb-0'>
+<a href='#'>
+>>> Read more
+</a>
+</p>
+</div>
+</div>
+</div>
+<!-- / End public review -->
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='footer__content'>
+<!-- Footer -->
+<footer class='page-footer font-small mdb-color pt-4'>
+<!-- Footer Links -->
+<div class='container text-center text-md-left'>
+<!-- Footer links -->
+<div class='row text-center text-md-left mt-3 pb-3'>
+<!-- Grid column -->
+<div class='col-md-3 col-lg-3 col-xl-3 mx-auto mt-3'>
+<h6 class='text-uppercase mb-4 font-weight-bold'>
+<img src="/images/logo/footer-logo.png" alt="Footer logo" />
+</h6>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+<!-- / Store information -->
+<ul class='footer__store ul__list'>
+<li>
+<a href='#'>
+<img src="/images/store/google-play.png" alt="Google play" />
+</a>
+</li>
+<li>
+<a href='#'>
+<img src="/images/store/app-store.png" alt="App store" />
+</a>
+</li>
+</ul>
+<!-- / End store information -->
+</div>
+<!-- Grid column -->
+<hr class='w-100 clearfix d-md-none'>
+<!-- Grid column -->
+<div class='col-md-2 col-lg-2 col-xl-2 mx-auto mt-3'>
+<p class='mb-4'>Sign up</p>
+<p>
+<a class='footer-text' href='#!'>Log in</a>
+</p>
+<p>
+<a class='footer-text' href='#!'>Post a ride</a>
+</p>
+<p>
+<a class='footer-text' href='#!'>Find a ride</a>
+</p>
+</div>
+<!-- Grid column -->
+<hr class='w-100 clearfix d-md-none'>
+<!-- Grid column -->
+<div class='col-md-3 col-lg-2 col-xl-2 mx-auto mt-3'>
+<p class='mb-4'>How it works</p>
+<p>
+<a class='footer-text' href='#!'>For drivers</a>
+</p>
+<p>
+<a class='footer-text' href='#!'>For passengers</a>
+</p>
+<p>
+<a class='footer-text' href='#!'>Help</a>
+</p>
+</div>
+<!-- Grid column -->
+<hr class='w-100 clearfix d-md-none'>
+<!-- Grid column -->
+<div class='col-md-2 col-lg-2 col-xl-2 mx-auto mt-3'>
+<p class='mb-4'>Students</p>
+<p>
+<a class='footer-text' href='#!'>Contact us/support</a>
+</p>
+<p>
+<a class='footer-text' href='#!'>FAQ's</a>
+</p>
+<p>
+<a class='footer-text' href='#!'>Partners</a>
+</p>
+</div>
+<!-- Grid column -->
+<!-- Grid column -->
+<div class='col-md-2 col-lg-2 col-xl-2 mx-auto mt-3'>
+<p class='mb-4'>Terms of services</p>
+<p>
+<a class='footer-text' href='#!'>Privacy policy</a>
+</p>
+<p>
+<a class='footer-text' href='#!'>Media</a>
+</p>
+</div>
+<!-- Grid column -->
+</div>
+<!-- Footer links -->
+<hr>
+<!-- Grid row -->
+<div class='row d-flex align-items-center'>
+<!-- Grid column -->
+<div class='col-md-7 col-lg-8'>
+<!-- Copyright -->
+<p class='text-center text-md-left'>© 2019 Ridesforshare all rights reserved</p>
+</div>
+<!-- Grid column -->
+<!-- Grid column -->
+<div class='col-md-5 col-lg-4 ml-lg-0'>
+<!-- Social buttons -->
+<div class='text-center text-md-right'>
+<ul class='list-unstyled list-inline footer-social-media'>
+<li class='list-inline-item'>
+<a class='btn-floating btn-sm rgba-white-slight mx-1'>
+<i aria-hidden='true' class='fa fa-facebook'></i>
+</a>
+</li>
+<li class='list-inline-item'>
+<a class='btn-floating btn-sm rgba-white-slight mx-1'>
+<i aria-hidden='true' class='fa fa-instagram'></i>
+</a>
+</li>
+<li class='list-inline-item'>
+<a class='btn-floating btn-sm rgba-white-slight mx-1'>
+<i aria-hidden='true' class='fa fa-youtube-play'></i>
+</a>
+</li>
+<li class='list-inline-item'>
+<a class='btn-floating btn-sm rgba-white-slight mx-1'>
+<i aria-hidden='true' class='fa fa-twitter'></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<!-- Grid column -->
+</div>
+<!-- Grid row -->
+</div>
+<!-- Footer Links -->
+</footer>
+<!-- Footer -->
+<!-- ===================footer_end=========================== -->
+<!-- popup -->
+<!-- popup -->
+<!-- =====================banner_end===================== -->
+<!-- calander_end -->
+
+</div>
+</div>
+<script src="javascripts/libs/gijgo.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.12/dist/js/bootstrap-select.min.js"></script>
+<script src="javascripts/libs/parsley.min.js"></script>
+<script src="javascripts/libs/bootstrap-select-country.min.js"></script>
+<script src="javascripts/site.js" type="text/javascript"></script>
+<script src="javascripts/common.js" type="text/javascript"></script>
+<script src="javascripts/validations.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js" type="text/javascript"></script>
+
+</body>
+</html>
